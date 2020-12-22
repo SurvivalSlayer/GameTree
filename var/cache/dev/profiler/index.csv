@@ -1,0 +1,10 @@
+f8b116,::1,GET,https://localhost:8000/,1608575041,,404
+9d6ac6,::1,GET,https://localhost:8000/login,1608575091,,200
+1ad69e,::1,POST,https://localhost:8000/login,1608575095,,302
+9eeb57,::1,GET,https://localhost:8000/login,1608575096,,200
+a80081,::1,GET,https://localhost:8000/register,1608575282,,200
+6755de,::1,GET,https://localhost:8000/register,1608575290,693cee,500
+693cee,::1,POST,https://localhost:8000/register,1608575290,,500
+710669,::1,GET,https://localhost:8000/logout,1608575380,,302
+ba0a0e,::1,GET,https://localhost:8000/,1608575381,,404
+cbed25,::1,GET,https://localhost:8000/login,1608575388,,200

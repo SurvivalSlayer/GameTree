@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Affichage des posts{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/post.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    {% include 'barre_de_navigation.html.twig' %}
+    <div class="post-form">
+        <div class="post">
+            <h3 class="text-titre">Vos publications</h3>
+            <button type="button" onclick="window.location.href={{path('app_post_new')}}" class="ajouter">Publiez votre nouveau jeu</button>
+            <div class="old-post-form">
+
+                {% for annonce in annonces %}
+
+                    <div class="old-post">
+                        <div class="image-jeu">
+                            {{annonce.images}}
+                        </div>
+                        <div class="description">
+                            {{annonce.title}}
+                            {{annonce.content}}
+                        </div>
+                    </div>
+                    
+                {% else %}
+                    <div class="lesscontenu">
+                        <p class="text-lesscontenu">Vous n'avez publiez aucun posts précédement...</p>
+                    </div>
+
+                {% endfor %}
+
+                
+
+
+                {#<div class="old-post">
+                    <!--a modifier avec un for twig par rapport au nombre de tag-->
+                    <div class="image-jeu">
+                        <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--à modifier suivant ta base de donnée-->
+                    </div>
+                    <div class="description">
+                        <p class="text titredes">Description</p>
+                        <p class="descri-jeu">testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest {# {{ app.jeu.description }}</p>
+                        <button type="button" class="btn-suppr" >Supprimer le post</button>
+                    </div>
+                    <div class="logo-modif">
+                        <button id="modif" type="button" onclick="window.location.href = 'ajout';"></button>
+                    </div>
+                </div>
+                <!--partie à supprimer simple démo mais il manque un code pour dupliquer cette partie suivant le nombre de post
+                et pour l'intants je ne sais pas comment faire-->
+                <div class="old-post">
+                    <div class="image-jeu">
+                        <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--modi accées bd-->
+                    </div>
+                    <div class="description">
+                        <p class="text titredes">Description</p>
+                        <p class="descri-jeu">testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest {# {{ app.jeu.description }} </p>
+                        <button type="button" class="btn-suppr" >Supprimer le post</button>
+                    </div>
+                    <div class="logo-modif">
+                        <button id="modif" type="button" onclick="window.location.href = 'ajout';"></button>
+                    </div>
+                </div>
+                <div class="old-post">
+                    <div class="image-jeu">
+                        <img class="img-jeu" src="{{ asset('images/test.jpg') }}">
+                    </div>
+                    <div class="description">
+                        <p class="text titredes">Description</p>
+                        <p class="descri-jeu">testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest {# {{ app.jeu.description }} </p>
+                        <button type="button" class="btn-suppr" >Supprimer le post</button>
+                    </div>
+                    <div class="logo-modif">
+                        <button id="modif" type="button" onclick="window.location.href = 'ajout';"></button>
+                    </div>
+                </div>#}
+            </div>
+        </div>
+    </div>
+{% endblock %}

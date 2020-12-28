@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification du profil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/profilModif.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% include 'barre_de_navigation.html.twig' %}
+    <div id="profile-form">
+        <div class="profile">
+            <div id="modif-img">
+                <div id="photo-profil">
+                    {% if app.user.images %}
+                        {#<img src=" { vich_uploader_asset(user, 'file')| filter('thumbnail')}}" />#}
+                    {% else %}
+                        <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
+                    {% endif %}
+                    {#<input type="file" id="img_profil" name="img_profil" class="text" value="Choisir un fichier"/>#}
+                    {{ form_start(ImageUpload) }}
+                        {{ form_row(ImageUpload.image) }}
+                        {{ form_row(ImageUpload.submit) }}
+                    {{ form_end(ImageUpload) }}
+                </div>
+            </div>
+            <form method="post">
+                <div id="user-info">
+                    <div id="info-static">
+                        <strong>
+                            <p class="static-text text">Nom d'utilisateur</p>
+                            <p class="static-text text">Mot de passe</p>
+                            <p class="static-text text">Confirmer mot de passe</p>
+                        </strong>
+                    </div>
+                    <div id="info-dynamic">
+                        <input type="text" id="username" name="username" class="dynamic-text text" placeholder="{{ app.user.username }}"/>
+                        <input type="password" id="pass" name="pass" class="dynamic-text text"/>
+                        <input type="password" id="pass2" name="pass2" class="dynamic-text text"/>
+                    </div>
+
+                </div>
+                <div class="validation-form">
+                    <div class="validation">
+                        <button class="bg" type="submit">Valider</button>
+                        <button class="bg" type="button" onclick="window.location.href={{path('app_Profile')}}">Annuler</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

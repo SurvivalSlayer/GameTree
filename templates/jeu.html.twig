@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/jeu.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    {% include 'barre_de_navigation.html.twig' %}
+    <div class="jeu-form">
+        <div class="jeu">
+            <div class="jeu-right">
+                <div class="titre">
+                    <h3 class="text txt-auteur"> <strong>raockjie advenced {# {{ app.jeu.name }} #}</strong></h3>
+                </div>
+                <div class="tag_form">
+                    <!--a modifier avec un for twig par rapport au nombre de tag-->
+                    <p class="tag text">action {# {{ app.jeu.name }} #}</p>
+                    <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
+                    <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                </div>
+                <div class="image-jeu">
+                    <img class="img-jeu" src="{{ asset('images/test.jpg') }}">
+                </div>
+            </div>
+            <div class="jeu-left">
+                <div class="auteur-form">
+                    <div class="bandeau">
+                        <div class="img-profile">
+                            <img class="img-profile" src="{{ asset('images/img_default.jpg') }}">
+                        </div>
+                        <div class="auteur-date">
+                            <div class="auteur form">
+                                <p class="text"><strong>Nom de l'auteur</strong></p>
+                                <p class="textg txt">ragnarock200038 {# {{ app.user.name }} #}</p>
+                            </div>
+                            <div class="date form">
+                                <p class="text"><strong>Date de publication</strong></p>
+                                <p class="textg txt">11/12/2020 {# {{ app.jeu.date }} #}</p>
+                            </div>
+                            <div class="nb-tele form">
+                                <p class="text"><strong>Nombre de téléchagement</strong></p>
+                                <p class="textg txt">500 {# {{ app.jeu.compteur }} #}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="descrip-form">
+                        <div class="descrip">
+                            <h3 class="text txt-descrip">Description</h3>
+                            <p class="textg txt-des">petit test à remplacer par l'accés à la base de donnée{# {{ app.jeu.description }} #}</p>
+                        </div>
+                    </div>
+
+                <div class="tel-form">
+                    <div class="btn-telecharger">
+                        <img class="img-tele" src="{{ asset('images/telecharger.png') }}">
+                        <button type="button" class="btn text"><strong>Télécharger</strong></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

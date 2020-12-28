@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Postez votre jeu{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/ajout.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <div class="jeu-form">
+        <form class="jeu">
+            <h3 class="text-titre">Postez votre jeu</h3>
+            <div class="descrip">
+                <p class="text">Entrez le titre de votre jeu*</p>
+                <input type="text" class="titre"/>
+                <p class="txt-padding text">Entrez une bref description de votre jeu*</p>
+                <textarea cols="35" rows="5" type="text" class="description" maxlength="1000" placeholder="1000 caractères maximum"></textarea>
+            </div>
+            <div class="tag_form">
+                <p class="tag text txt-padding">Supprimez de la liste les tags qui ne correspondent pas à votre jeu</p>
+                <div class="list-tag">
+                    <button type="button" class="btn-tag" aria-label="Retirer Aventure de la liste">Aventure</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Action de la liste">Action</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Course de la liste">Course</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer FPS de la liste">FPS</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Combat de la liste">Combat</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer MMO/MMORPG de la liste">MMO/MMORPG</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Simulation de la liste">Simulation</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Plate-forme de la liste">Plate-forme</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Réflexion de la liste">Réflexion</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Stratégie de la liste">Stratégie</button>
+                    <button type="button" class="btn-tag" aria-label="Retirer Autre de la liste">Autre</button>
+                </div>
+            </div>
+            <div class="image-jeu">
+                <img class="img-jeu" src="{{ asset('images/test.jpg') }}">
+                <input class="file text" type="file" value="Choisir un fichier"/>
+            </div>
+            <div class="telecharger">
+                <p class="text-telechargement txt-padding text">Ajoutez votre jeu en éxécutable</p>
+                <input type="file" class="file text" value="Choisir un fichier" required="required"/>
+            </div>
+            <div class="validation">
+                <button type="submit" class="btn">Valider</button>
+                <button type="button" onclick="window.location.href={{path('app_post')}}" class="btn">Annuler</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="{{ asset ('css/navbar.css') }}">
+    </head>
+    <body>
+    {% block body %}
+        <nav class="navbar-form">
+            <div class="logo-name">
+                <img class="logo" src="{{ asset('images/logo.png') }}" alt="image du logo">
+                <h3>GameTree</h3>
+            </div>
+
+            <div class="navbar-lien">
+                <ul class="navbar-nav">
+                    <a href="{{ path('app_Acceuil') }}" class="nav-link">Acceuil</a>
+                    <a href="{{ path('app_Profile') }}" class="nav-link">Votre profil</a>
+                    <a href="{{ path('app_post') }}" class="nav-link">Vos posts</a>
+                </ul>
+            </div>
+            <form action="#" method="post" class="form-search">
+                <input type="search" name="search" class="bar-search" placeholder="Rechercher">
+                <button id="loupe" type="submit"></button>
+            </form>
+
+        </nav>
+    {% endblock %}
+    </body>
+</html>

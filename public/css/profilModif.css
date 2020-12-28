@@ -1,0 +1,82 @@
+#profile-form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 4em;
+}
+
+.profile{
+    margin: 5em;
+    width: 35em;
+    min-width: 35em;
+    border: none;
+    border-radius: 3em;
+    background: rgba(255,255,255,0.1);
+    padding: 2em;
+}
+
+#photo-profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-profile{
+    margin-bottom: 1em;
+    height: 7em;
+    width: auto;
+    border-radius: 50%;
+}
+.text{
+    color: white;
+    font-family: "Arial Rounded MT Bold",sans-serif;
+    margin: 1em 0.3em 1em 1em;
+}
+
+input[type=file]{
+    padding-bottom: 0.5em;
+}
+
+#user-info{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#info-static{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.static-text{
+    text-align: right;
+    padding-bottom: 0.6em;
+
+}
+
+#info-dynamic{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.2em;
+}
+
+.dynamic-text{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 0.4em;
+}
+
+.bg{
+    background: rgba(255,255,255,0.1);
+    border: 3px solid black;
+    border-radius: 5pt;
+    padding: 0.5em;
+    color: white;
+    font-family: "Cooper Black",sans-serif;
+}
+
+.validation{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

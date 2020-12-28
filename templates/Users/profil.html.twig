@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page du profil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset ('css/profil.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% include 'barre_de_navigation.html.twig' %}
+    <div id="profile-form">
+        <div id="profile">
+            <div id="logos-top">
+                <button id="deconnection" class="icon-top" type="button" onclick="window.location.href = 'connexion';"></button>
+                <div id="photo-profil">
+                    {# {% if user.file %} #}<!--a modifier par rapport à ta base de donnée-->
+                    <!--<img src="{# { vich_uploader_asset(user, 'file')| filter('thumbnail')}} #}" />asset a modifier par rapport à ta base de donnée-->
+                    {# {% else %} #}
+                    <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
+                    {# {% endif %} #}
+                </div>
+                <button id="modif" class="icon-top" type="button" onclick="window.location.href = 'modif';"></button>
+
+            </div>
+
+            <div id="user-info">
+                <div id="info-static">
+                    <strong>
+                        <p class="static-text text">Nom d'utilisateur</p>
+                        <p class="static-text text">Mot de passe</p>
+                    </strong>
+                </div>
+                <div id="info-dynamic">
+                    <p class="dynamic-text text">{{ app.user.username }}</p>
+                    <p class="dynamic-text text" >non affiché</p>
+                </div>
+                <a href="{{ path('app_EditProfile') }}" class="nav-link">modifier Profil</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

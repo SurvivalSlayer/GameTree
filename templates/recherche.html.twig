@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/recherche.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% include 'barre_de_navigation.html.twig' %}
+    <div class="recherche-form">
+        <h3 class="result">Résultat de votre recherche</h3>
+        <form method="post" class="form-filtre">
+            <select id="inputState" class="form-select">
+                <option selected>... Selectionnez un tag...</option>
+                <option>Aventure</option>
+                <option>Action</option>
+                <option>Combat</option>
+                <option>Course</option>
+                <option>FPS</option>
+                <option>MMO/MMORPG</option>
+                <option>Simulation</option>
+                <option>Plate-forme</option>
+                <option>Réflexion</option>
+                <option>Statégie</option>
+                <option>Autre</option>
+            </select>
+            <button type="submit" class="btn-filtre">Appliquer filtre</button>
+        </form>
+        <div class="post-container">
+            <!--for twig sur le nombre de résultat-->
+            <div class="resultat-post">
+                <div class="image-jeu">
+                    <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--modi accées bd-->
+                    <button class="btn-jeu" onclick="window.location.href='jeu'">Voir le jeu</button>
+                </div>
+                <div class="description">
+                    <div class="date-form">
+                        <p class="date-txt text">Date</p>
+                        <p class="date text">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                    </div>
+                    <div class="tag_form">
+                        <!--a modifier avec un for twig par rapport au nombre de tag-->
+                        <p class="tag text">action {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                    </div>
+                    <p class="text titredes">Description</p>
+                    <p class="descri-jeu text">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                </div>
+            </div>
+            <div class="resultat-post">
+                <div class="image-jeu">
+                    <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--modi accées bd-->
+                    <button class="btn-jeu" onclick="window.location.href='jeu'">Voir le jeu</button>
+                </div>
+                <div class="description">
+                    <div class="date-form">
+                        <p class="date-txt text">Date</p>
+                        <p class="date text">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                    </div>
+                    <div class="tag_form">
+                        <!--a modifier avec un for twig par rapport au nombre de tag-->
+                        <p class="tag text">action {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                    </div>
+                    <p class="text titredes">Description</p>
+                    <p class="descri-jeu text">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                </div>
+            </div>
+            <div class="resultat-post">
+                <div class="image-jeu">
+                    <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--modi accées bd-->
+                    <button class="btn-jeu" onclick="window.location.href='jeu'">Voir le jeu</button>
+                </div>
+                <div class="description">
+                    <div class="date-form">
+                        <p class="date-txt text">Date</p>
+                        <p class="date text">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                    </div>
+                    <div class="tag_form">
+                        <!--a modifier avec un for twig par rapport au nombre de tag-->
+                        <p class="tag text">action {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                    </div>
+                    <p class="text titredes">Description</p>
+                    <p class="descri-jeu text">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                </div>
+            </div>
+            <div class="resultat-post">
+                <div class="image-jeu">
+                    <img class="img-jeu" src="{{ asset('images/test.jpg') }}"><!--modi accées bd-->
+                    <button class="btn-jeu" onclick="window.location.href='jeu'">Voir le jeu</button>
+                </div>
+                <div class="description">
+                    <div class="date-form">
+                        <p class="date-txt text">Date</p>
+                        <p class="date text">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                    </div>
+                    <div class="tag_form">
+                        <!--a modifier avec un for twig par rapport au nombre de tag-->
+                        <p class="tag text">action {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
+                        <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                    </div>
+                    <p class="text titredes">Description</p>
+                    <p class="descri-jeu text">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

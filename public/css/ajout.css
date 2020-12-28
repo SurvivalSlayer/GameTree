@@ -1,0 +1,124 @@
+.jeu-form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.jeu{
+    width: 35em;
+    min-width: 35em;
+    border: none;
+    border-radius: 3em;
+    background: rgba(255,255,255,0.1);
+    padding: 2em;
+}
+
+.text-titre{
+    font-family: "Cooper Black",sans-serif;
+    font-size: x-large;
+    color: white;
+    padding: 0 0 1em 0;
+    margin: 0;
+}
+
+.descrip{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.titre{
+    width: 13em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.description{
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.tag_form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.tag{
+    text-align: center;
+}
+
+.list-tag{
+    width: 27em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.btn-tag {
+    background:#000139;
+    padding: 0.5em;
+    margin: 0.2em;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.8em;
+}
+.btn-tag:after {
+    content: "X";
+    margin: 0.25em 0.25em 0.25em 0.45em;
+    padding-left: 0.4em;
+    border-left: 0.15em solid white;
+}
+
+.text{
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.txt-padding{
+    padding-top: 1.5em;
+}
+
+.image-jeu{
+    padding-top: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.img-jeu{
+    width: 15em;
+    height: auto;
+    border-radius: 1em;
+    padding: 0;
+    margin: 0;
+}
+.telecharger{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.file{
+    padding-top: 1em;
+}
+
+.btn{
+    background:rgba(255,255,255,0.1);
+    margin-top: 1em;
+    padding: 0.5em;
+    color: white;
+    border-radius: 0.5em;
+    border: 0.2em solid black;
+}
+
+.validation{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}

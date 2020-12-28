@@ -1,0 +1,106 @@
+.post-form{
+    margin: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 7em;
+
+
+}
+
+.post{
+    height: 32em;
+    width: 40em;
+    background: black;
+    overflow-y: auto;
+    border: none;
+    border-radius: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+}
+
+.text-titre{
+    margin: 0.5em 0 0.5em 1em;
+}
+.ajouter{
+    min-height: 8em;
+    width: 100%;
+    border: 2px dashed white;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-family: "Arial Rounded MT Bold",sans-serif;
+    font-size: large;
+    margin-top: 0.5em;
+}
+
+.text{
+    color: white;
+    font-family: "Arial Rounded MT Bold",sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+}
+
+.img-jeu{
+    width: 15em;
+    height: auto;
+    border-radius: 1em;
+    margin-top: 0.5em;
+}
+
+.old-post{
+    margin: 1em;
+    height: 9.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid white;
+}
+
+.description{
+    width: 20.2em;
+    margin: 0 0 0 1em;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.descri-jeu{
+    max-width: 100%;
+    max-height: 100%;
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: medium;
+    text-align: left;
+    text-indent: 1em;
+    word-wrap:break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.btn-suppr{
+    width: 10em;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.2em;
+}
+
+#modif{
+    height: 2em;
+    width: 2em;
+    border: none;
+    background:  no-repeat center/90% url(../images/crayon.png);;
+}
+
+.text-lesscontenu{
+    margin-top: 3em;
+    text-align: center;
+    color: white;
+    font-family: "Arial Rounded MT Bold",sans-serif;
+    font-size: medium;
+}

@@ -110,10 +110,10 @@ final class Versions
   'twig/twig' => 'v3.1.1@b02fa41f3783a2616eccef7b92fbc2343ffed737',
   'webimpress/safe-writer' => '2.1.0@5cfafdec5873c389036f14bf832a5efc9390dcdd',
   'symfony/web-profiler-bundle' => 'v5.2.1@6cd2f3d01faf1d77125ec14150a6fbd062dbe211',
-  'symfony/polyfill-ctype' => '*@',
-  'symfony/polyfill-iconv' => '*@',
-  'symfony/polyfill-php72' => '*@',
-  '__root__' => 'No version set (parsed as 1.0.0)@',
+  'symfony/polyfill-ctype' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
+  'symfony/polyfill-iconv' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
+  'symfony/polyfill-php72' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
+  '__root__' => 'dev-main@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
 );
 
     private function __construct()

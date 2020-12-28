@@ -13,7 +13,7 @@
     <div class="post-form">
         <div class="post">
             <h3 class="text-titre">Vos publications</h3>
-            <button type="button" onclick="window.location.href={{path('app_post_new')}}" class="ajouter">Publiez votre nouveau jeu</button>
+            <button type="button" onclick="window.location.href={{ path('app_post_new') }}" class="ajouter">Publiez votre nouveau jeu</button>
             <div class="old-post-form">
 
                 {% for annonce in annonces %}
@@ -27,7 +27,7 @@
                             {{annonce.content}}
                         </div>
                     </div>
-                    
+
                 {% else %}
                     <div class="lesscontenu">
                         <p class="text-lesscontenu">Vous n'avez publiez aucun posts précédement...</p>

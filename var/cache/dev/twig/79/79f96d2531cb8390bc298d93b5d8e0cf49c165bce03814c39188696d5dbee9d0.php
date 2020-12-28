@@ -118,44 +118,38 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
         <form class=\"jeu\">
             <h3 class=\"text-titre\">Postez votre jeu</h3>
             <div class=\"descrip\">
-                <p class=\"text\">Entrez le titre de votre jeu*</p>
-                <input type=\"text\" class=\"titre\"/>
-                <p class=\"txt-padding text\">Entrez une bref description de votre jeu*</p>
-                <textarea cols=\"35\" rows=\"5\" type=\"text\" class=\"description\" maxlength=\"1000\" placeholder=\"1000 caractères maximum\"></textarea>
+                ";
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
+        echo "
+                    ";
+        // line 17
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'widget');
+        echo "
+                    <div class=\"validation\">
+                        <button type=\"submit\" class=\"btn\">Valider</button>
+                        <button type=\"button\" onclick=\"window.location.href=";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_post");
+        echo "\" class=\"btn\">Annuler</button>
+                    </div>
+                ";
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        echo "
             </div>
-            <div class=\"tag_form\">
-                <p class=\"tag text txt-padding\">Supprimez de la liste les tags qui ne correspondent pas à votre jeu</p>
-                <div class=\"list-tag\">
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Aventure de la liste\">Aventure</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Action de la liste\">Action</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Course de la liste\">Course</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer FPS de la liste\">FPS</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Combat de la liste\">Combat</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer MMO/MMORPG de la liste\">MMO/MMORPG</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Simulation de la liste\">Simulation</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Plate-forme de la liste\">Plate-forme</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Réflexion de la liste\">Réflexion</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Stratégie de la liste\">Stratégie</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Autre de la liste\">Autre</button>
-                </div>
-            </div>
-            <div class=\"image-jeu\">
-                <img class=\"img-jeu\" src=\"";
-        // line 38
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\">
-                <input class=\"file text\" type=\"file\" value=\"Choisir un fichier\"/>
-            </div>
-            <div class=\"telecharger\">
-                <p class=\"text-telechargement txt-padding text\">Ajoutez votre jeu en éxécutable</p>
-                <input type=\"file\" class=\"file text\" value=\"Choisir un fichier\" required=\"required\"/>
-            </div>
-            <div class=\"validation\">
-                <button type=\"submit\" class=\"btn\">Valider</button>
-                <button type=\"button\" onclick=\"window.location.href='posts'\" class=\"btn\">Annuler</button>
-            </div>
-        </form>
+                ";
+        // line 58
+        echo "        </form>
     </div>
+    <script src=\"";
+        // line 60
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/afficheImage.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 61
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/suppr.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -177,7 +171,7 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
 
     public function getDebugInfo()
     {
-        return array (  145 => 38,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  151 => 61,  147 => 60,  143 => 58,  138 => 22,  133 => 20,  127 => 17,  123 => 16,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -197,41 +191,52 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
         <form class=\"jeu\">
             <h3 class=\"text-titre\">Postez votre jeu</h3>
             <div class=\"descrip\">
-                <p class=\"text\">Entrez le titre de votre jeu*</p>
-                <input type=\"text\" class=\"titre\"/>
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <div class=\"validation\">
+                        <button type=\"submit\" class=\"btn\">Valider</button>
+                        <button type=\"button\" onclick=\"window.location.href={{path('app_post')}}\" class=\"btn\">Annuler</button>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+                {#<p class=\"text\">Entrez le titre de votre jeu*</p>
+                <input type=\"text\" class=\"titre\" required=\"required\"/>
                 <p class=\"txt-padding text\">Entrez une bref description de votre jeu*</p>
-                <textarea cols=\"35\" rows=\"5\" type=\"text\" class=\"description\" maxlength=\"1000\" placeholder=\"1000 caractères maximum\"></textarea>
+                <textarea cols=\"35\" rows=\"5\" type=\"text\" class=\"description\" maxlength=\"1000\" placeholder=\"1000 caractères maximum\" required=\"required\"></textarea>
             </div>
             <div class=\"tag_form\">
                 <p class=\"tag text txt-padding\">Supprimez de la liste les tags qui ne correspondent pas à votre jeu</p>
-                <div class=\"list-tag\">
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Aventure de la liste\">Aventure</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Action de la liste\">Action</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Course de la liste\">Course</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer FPS de la liste\">FPS</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Combat de la liste\">Combat</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer MMO/MMORPG de la liste\">MMO/MMORPG</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Simulation de la liste\">Simulation</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Plate-forme de la liste\">Plate-forme</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Réflexion de la liste\">Réflexion</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Stratégie de la liste\">Stratégie</button>
-                    <button type=\"button\" class=\"btn-tag\" aria-label=\"Retirer Autre de la liste\">Autre</button>
+                <div id=\"tag-list\" class=\"list-tag\">
+                    <button type=\"button\" id=\"1\" onclick=\"suppr(1)\" class=\"btn-tag\" aria-label=\"Retirer Aventure de la liste\">Aventure</button>
+                    <button type=\"button\" id=\"2\" onclick=\"suppr(2)\" class=\"btn-tag\" aria-label=\"Retirer Action de la liste\">Action</button>
+                    <button type=\"button\" id=\"3\" onclick=\"suppr(3)\" class=\"btn-tag\" aria-label=\"Retirer Course de la liste\">Course</button>
+                    <button type=\"button\" id=\"4\" onclick=\"suppr(4)\" class=\"btn-tag\" aria-label=\"Retirer FPS de la liste\">FPS</button>
+                    <button type=\"button\" id=\"5\" onclick=\"suppr(5)\" class=\"btn-tag\" aria-label=\"Retirer Combat de la liste\">Combat</button>
+                    <button type=\"button\" id=\"6\" onclick=\"suppr(6)\" class=\"btn-tag\" aria-label=\"Retirer MMO/MMORPG de la liste\">MMO/MMORPG</button>
+                    <button type=\"button\" id=\"7\" onclick=\"suppr(7)\" class=\"btn-tag\" aria-label=\"Retirer Simulation de la liste\">Simulation</button>
+                    <button type=\"button\" id=\"8\" onclick=\"suppr(8)\" class=\"btn-tag\" aria-label=\"Retirer Plate-forme de la liste\">Plate-forme</button>
+                    <button type=\"button\" id=\"9\" onclick=\"suppr(9)\" class=\"btn-tag\" aria-label=\"Retirer Réflexion de la liste\">Réflexion</button>
+                    <button type=\"button\" id=\"10\" onclick=\"suppr(10)\" class=\"btn-tag\" aria-label=\"Retirer Stratégie de la liste\">Stratégie</button>
+                    <button type=\"button\" id=\"11\" onclick=\"suppr(11)\" class=\"btn-tag\" aria-label=\"Retirer Autre de la liste\">Autre</button>
                 </div>
             </div>
             <div class=\"image-jeu\">
-                <img class=\"img-jeu\" src=\"{{ asset('images/test.jpg') }}\">
-                <input class=\"file text\" type=\"file\" value=\"Choisir un fichier\"/>
+                <img class=\"img-jeu\" id=\"profileDisplay\" onclick=\"triggerClick()\" src=\"{{ asset('images/test.jpg') }}\">
+                <label class=\"text\" for=\"profileImage\">Choisissez une image</label>
+                <input class=\"file text\" type=\"file\" name=\"profileImage\" onchange=\"displayImage(this)\" id=\"profileImage\" style=\"display: none;\"  accept=\".jpg, .jpeg, .png\" required=\"required\"/>
             </div>
             <div class=\"telecharger\">
                 <p class=\"text-telechargement txt-padding text\">Ajoutez votre jeu en éxécutable</p>
-                <input type=\"file\" class=\"file text\" value=\"Choisir un fichier\" required=\"required\"/>
+                <input type=\"file\" class=\"file text\" value=\"Choisir un fichier\" accept=\".exe, .apk, .zip\" required=\"required\"/>
             </div>
             <div class=\"validation\">
                 <button type=\"submit\" class=\"btn\">Valider</button>
-                <button type=\"button\" onclick=\"window.location.href='posts'\" class=\"btn\">Annuler</button>
-            </div>
+                <button type=\"button\" onclick=\"window.location.href={{path('app_post')}}\" class=\"btn\">Annuler</button>
+            </div>#}
         </form>
     </div>
-{% endblock %}", "postJeu.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co à git\\GameTree\\templates\\postJeu.html.twig");
+    <script src=\"{{ asset('Scripts/afficheImage.js') }}\"></script>
+    <script src=\"{{ asset('Scripts/suppr.js') }}\"></script>
+{% endblock %}", "postJeu.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\postJeu.html.twig");
     }
 }

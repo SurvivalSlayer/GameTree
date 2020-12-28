@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Users/ProfilModif.html.twig */
+/* Users/profilModif.html.twig */
 class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca891097 extends Template
 {
     private $source;
@@ -41,12 +41,12 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Users/ProfilModif.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Users/profilModif.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Users/ProfilModif.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Users/profilModif.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "Users/ProfilModif.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "Users/profilModif.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -114,7 +114,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
         // line 11
         echo "    ";
-        $this->loadTemplate("barre_de_navigation.html.twig", "Users/ProfilModif.html.twig", 11)->display($context);
+        $this->loadTemplate("barre_de_navigation.html.twig", "Users/profilModif.html.twig", 11)->display($context);
         // line 12
         echo "    <div id=\"profile-form\">
         <div class=\"profile\">
@@ -135,10 +135,26 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                     ";
         }
         // line 21
-        echo "                    <input type=\"file\" id=\"img_profil\" name=\"img_profil\" class=\"text\" value=\"Choisir un fichier\"/>
+        echo "                    ";
+        // line 22
+        echo "                    <label class=\"text\" for=\"profileImage\">Choisissez une image carré de préférence</label>
+                    ";
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 23, $this->source); })()), 'form_start');
+        echo "
+                        ";
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 24, $this->source); })()), "image", [], "any", false, false, false, 24), 'row');
+        echo "
+                        ";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 25, $this->source); })()), "submit", [], "any", false, false, false, 25), 'row');
+        echo "
                     ";
         // line 26
-        echo "                </div>
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 26, $this->source); })()), 'form_end');
+        echo "
+                </div>
             </div>
             <form method=\"post\">
                 <div id=\"user-info\">
@@ -151,8 +167,8 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                     </div>
                     <div id=\"info-dynamic\">
                         <input type=\"text\" id=\"username\" name=\"username\" class=\"dynamic-text text\" placeholder=\"";
-        // line 38
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38), "username", [], "any", false, false, false, 38), "html", null, true);
+        // line 39
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "username", [], "any", false, false, false, 39), "html", null, true);
         echo "\"/>
                         <input type=\"password\" id=\"pass\" name=\"pass\" class=\"dynamic-text text\"/>
                         <input type=\"password\" id=\"pass2\" name=\"pass2\" class=\"dynamic-text text\"/>
@@ -163,7 +179,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                     <div class=\"validation\">
                         <button class=\"bg\" type=\"submit\">Valider</button>
                         <button class=\"bg\" type=\"button\" onclick=\"window.location.href=";
-        // line 47
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_Profile");
         echo "\">Annuler</button>
                     </div>
@@ -172,6 +188,10 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
         </div>
     </div>
+    <script src=\"";
+        // line 55
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/afficheImage.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -183,7 +203,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
     public function getTemplateName()
     {
-        return "Users/ProfilModif.html.twig";
+        return "Users/profilModif.html.twig";
     }
 
     public function isTraitable()
@@ -193,7 +213,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
     public function getDebugInfo()
     {
-        return array (  167 => 47,  155 => 38,  141 => 26,  138 => 21,  132 => 19,  129 => 18,  127 => 17,  125 => 16,  119 => 12,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  193 => 55,  183 => 48,  171 => 39,  155 => 26,  151 => 25,  147 => 24,  143 => 23,  140 => 22,  138 => 21,  132 => 19,  129 => 18,  127 => 17,  125 => 16,  119 => 12,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -218,11 +238,12 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                     {% else %}
                         <img class=\"img-profile\" src=\"{{ asset ('images/img_default.jpg') }}\" />
                     {% endif %}
-                    <input type=\"file\" id=\"img_profil\" name=\"img_profil\" class=\"text\" value=\"Choisir un fichier\"/>
-                    {#{{ form_start(ImageUpload) }}
+                    {#<input type=\"file\" id=\"img_profil\" name=\"img_profil\" class=\"text\" value=\"Choisir un fichier\"/>#}
+                    <label class=\"text\" for=\"profileImage\">Choisissez une image carré de préférence</label>
+                    {{ form_start(ImageUpload) }}
                         {{ form_row(ImageUpload.image) }}
                         {{ form_row(ImageUpload.submit) }}
-                    {{ form_end(ImageUpload) }}#}
+                    {{ form_end(ImageUpload) }}
                 </div>
             </div>
             <form method=\"post\">
@@ -251,6 +272,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
         </div>
     </div>
-{% endblock %}", "Users/ProfilModif.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\Users\\profilModif.html.twig");
+    <script src=\"{{ asset('Scripts/afficheImage.js') }}\"></script>
+{% endblock %}", "Users/profilModif.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\Users\\profilModif.html.twig");
     }
 }

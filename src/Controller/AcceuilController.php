@@ -28,12 +28,13 @@ class AcceuilController extends AbstractController
     public function Post(AnnoncesRepository $annoncesRepository){
 
         $user = $this->getUser();
-
         $userID = $user->getId();
 
         return $this->render('post.html.twig', [
-            'annonces' => $annoncesRepository->findBy($userID),
+            'annonces' => $annoncesRepository->YourPost($userID),
         ]);
+
+        
     }
 
 
@@ -90,10 +91,10 @@ class AcceuilController extends AbstractController
             $entityManager->persist($annonce);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_Acceuil');
+            return $this->redirectToRoute('app_post');
         }
 
-        return $this->render('post.html.twig', [
+        return $this->render('postJeu.html.twig', [
             'annonce' => $annonce,
             'form' => $form->createView(),
         ]);

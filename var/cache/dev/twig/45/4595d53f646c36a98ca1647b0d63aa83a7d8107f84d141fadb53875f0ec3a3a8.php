@@ -174,12 +174,12 @@ class __TwigTemplate_238897c7cbe5d45a5529046a38b09e1c8c3227848855d5212c3cfa2aa8d
                     <div class=\"form-submit \">
                         <input type=\"submit\" name=\"submit\" value=\"Connexion\"/>
                     </div>
-                    ";
-        // line 49
-        echo "                    <div id=\"register-link\">
-                        ";
-        // line 51
-        echo "                        
+
+                    <div id=\"register-link\">
+                        <a href=\"";
+        // line 48
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Register ?</a>                  
                     </div>
 
                 </form>
@@ -188,7 +188,7 @@ class __TwigTemplate_238897c7cbe5d45a5529046a38b09e1c8c3227848855d5212c3cfa2aa8d
 
             <div class=\"container_photo\">
                 <img src=\"";
-        // line 59
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
         echo "\" alt=\"image du logo\">
             </div>
@@ -216,7 +216,7 @@ class __TwigTemplate_238897c7cbe5d45a5529046a38b09e1c8c3227848855d5212c3cfa2aa8d
 
     public function getDebugInfo()
     {
-        return array (  192 => 59,  182 => 51,  179 => 49,  171 => 41,  159 => 32,  154 => 29,  146 => 26,  143 => 25,  141 => 24,  138 => 23,  132 => 21,  130 => 20,  120 => 12,  110 => 11,  98 => 8,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  192 => 56,  181 => 48,  171 => 41,  159 => 32,  154 => 29,  146 => 26,  143 => 25,  141 => 24,  138 => 23,  132 => 21,  130 => 20,  120 => 12,  110 => 11,  98 => 8,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -266,12 +266,9 @@ class __TwigTemplate_238897c7cbe5d45a5529046a38b09e1c8c3227848855d5212c3cfa2aa8d
                     <div class=\"form-submit \">
                         <input type=\"submit\" name=\"submit\" value=\"Connexion\"/>
                     </div>
-                    {#<button class=\"btn btn-lg btn-primary\" type=\"submit\">
-                        Sign in
-                    </button>#}
+
                     <div id=\"register-link\">
-                        {# register link #}
-                        
+                        <a href=\"{{path('app_register')}}\">Register ?</a>                  
                     </div>
 
                 </form>
@@ -285,6 +282,6 @@ class __TwigTemplate_238897c7cbe5d45a5529046a38b09e1c8c3227848855d5212c3cfa2aa8d
         </div>
     </div>
 {% endblock %}
-", "security/login.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co à git\\GameTree\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\security\\login.html.twig");
     }
 }

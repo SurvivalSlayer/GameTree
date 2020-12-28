@@ -7,6 +7,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\CallbackTransformer;
 
 class AnnoncesType extends AbstractType
 {
@@ -15,6 +17,7 @@ class AnnoncesType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
+            ->add('tags', TextType::class)
             ->add('images', FileType::class, [
                 'label' => false,
                 'multiple' => true,
@@ -27,6 +30,17 @@ class AnnoncesType extends AbstractType
                 'mapped' => false,
                 'required' => false
             ])
+        ;
+        $builder->get('tags')->addModelTransformer(new CallbackTransformer(
+            function ($tagsAsArray) {
+                // transform the array to a string
+                return implode(', ', $tagsAsArray);
+            },
+            function ($tagsAsString) {
+                // transform the string back to an array
+                return explode(', ', $tagsAsString);
+            }
+        ))
         ;
     }
 

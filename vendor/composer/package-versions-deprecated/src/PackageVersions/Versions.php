@@ -81,9 +81,11 @@ final class Versions
   'symfony/http-kernel' => 'v5.2.1@1feb619286d819180f7b8bc0dc44f516d9c62647',
   'symfony/intl' => 'v5.2.1@53927f98c9201fe5db3cfc4d574b1f4039020297',
   'symfony/maker-bundle' => 'v1.26.1@0f1d3ed2584349dc8700d7908e8a92b3742b1c99',
+  'symfony/mime' => 'v5.2.1@de97005aef7426ba008c46ba840fc301df577ada',
   'symfony/options-resolver' => 'v5.2.1@87a2a4a766244e796dd9cb9d6f58c123358cd986',
   'symfony/polyfill-intl-grapheme' => 'v1.20.0@c7cf3f858ec7d70b89559d6e6eb1f7c2517d479c',
   'symfony/polyfill-intl-icu' => 'v1.20.0@c44d5bf6a75eed79555c6bf37505c6d39559353e',
+  'symfony/polyfill-intl-idn' => 'v1.20.0@3b75acd829741c768bc8b1f84eb33265e7cc5117',
   'symfony/polyfill-intl-normalizer' => 'v1.20.0@727d1096295d807c309fb01a851577302394c897',
   'symfony/polyfill-mbstring' => 'v1.20.0@39d483bdf39be819deabf04ec872eb0b2410b531',
   'symfony/polyfill-php73' => 'v1.20.0@8ff431c517be11c78c48a39a66d37431e26a6bed',
@@ -110,10 +112,10 @@ final class Versions
   'twig/twig' => 'v3.1.1@b02fa41f3783a2616eccef7b92fbc2343ffed737',
   'webimpress/safe-writer' => '2.1.0@5cfafdec5873c389036f14bf832a5efc9390dcdd',
   'symfony/web-profiler-bundle' => 'v5.2.1@6cd2f3d01faf1d77125ec14150a6fbd062dbe211',
-  'symfony/polyfill-ctype' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
-  'symfony/polyfill-iconv' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
-  'symfony/polyfill-php72' => '*@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
-  '__root__' => 'dev-main@f215415ff8b56b0628cfb5b73b6d994cd564f5d6',
+  'symfony/polyfill-ctype' => '*@22ed7e7750e9cabf3e2f0fa62040b55bbb3a8782',
+  'symfony/polyfill-iconv' => '*@22ed7e7750e9cabf3e2f0fa62040b55bbb3a8782',
+  'symfony/polyfill-php72' => '*@22ed7e7750e9cabf3e2f0fa62040b55bbb3a8782',
+  '__root__' => 'dev-main@22ed7e7750e9cabf3e2f0fa62040b55bbb3a8782',
 );
 
     private function __construct()

@@ -119,115 +119,57 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
         // line 13
         echo "    <div class=\"acceuil-form\">
         <h3 class=\"nov\">Nouveautés</h3>
-        <!--ajouter une fonction pour afficher au maximun 5 posts triés du plus récent au moins récent
-        et aussi un for twig pour créer le bon nombre de div avec le last-post-->
+
         <div class=\"post-container\">
-            <div class=\"last-post\">
-                <div class=\"image-jeu\">
-                    <img class=\"img-jeu\" src=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\"><!--modi accées bd-->
-                    <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
-                </div>
-                <div class=\"description\">
-                    <div class=\"date-form\">
-                        <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 ";
-        // line 26
-        echo "</p><!--modif accés basse-->
+
+            ";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["annonces"]) || array_key_exists("annonces", $context) ? $context["annonces"] : (function () { throw new RuntimeError('Variable "annonces" does not exist.', 18, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
+            // line 19
+            echo "                <div class=\"last-post\">
+                    <div class=\"image-jeu\">
+                        ";
+            // line 22
+            echo "                        <button class=\"btn-jeu\" onclick=\"window.location.href=";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_Acceuil");
+            echo "\">Voir le jeu</button><!--A modifier le path-->
                     </div>
-                    <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.";
-        // line 29
-        echo "</p><!--modif-->
-                </div>
-            </div>
-            <div class=\"last-post\">
-                <div class=\"image-jeu\">
-                    <img class=\"img-jeu\" src=\"";
+                    <div class=\"description\">
+                        <div class=\"date-form\">
+                            ";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "time", [], "any", false, false, false, 26), "html", null, true);
+            echo "
+                        </div>
+                        ";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "title", [], "any", false, false, false, 28), "html", null, true);
+            echo "
+                        ";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "content", [], "any", false, false, false, 29), "html", null, true);
+            echo "
+                    </div>
+            ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 32
+            echo "
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 34
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\"><!--modi accées bd-->
-                    <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
-                </div>
-                <div class=\"description\">
-                    <div class=\"date-form\">
-                        <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 ";
-        // line 40
-        echo "</p><!--modif accés basse-->
-                    </div>
-                    <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.";
-        // line 43
-        echo "</p><!--modif-->
-                </div>
-            </div>
-            <div class=\"last-post\">
-                <div class=\"image-jeu\">
-                    <img class=\"img-jeu\" src=\"";
-        // line 48
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\"><!--modi accées bd-->
-                    <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
-                </div>
-                <div class=\"description\">
-                    <div class=\"date-form\">
-                        <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 ";
-        // line 54
-        echo "</p><!--modif accés basse-->
-                    </div>
-                    <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.";
-        // line 57
-        echo "</p><!--modif-->
-                </div>
-            </div>
-            <div class=\"last-post\">
-                <div class=\"image-jeu\">
-                    <img class=\"img-jeu\" src=\"";
-        // line 62
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\"><!--modi accées bd-->
-                    <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
-                </div>
-                <div class=\"description\">
-                    <div class=\"date-form\">
-                        <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 ";
-        // line 68
-        echo "</p><!--modif accés basse-->
-                    </div>
-                    <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.";
-        // line 71
-        echo "</p><!--modif-->
-                </div>
-            </div>
-            <div class=\"last-post\">
-                <div class=\"image-jeu\">
-                    <img class=\"img-jeu\" src=\"";
-        // line 76
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
-        echo "\"><!--modi accées bd-->
-                    <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
-                </div>
-                <div class=\"description\">
-                    <div class=\"date-form\">
-                        <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 ";
-        // line 82
-        echo "</p><!--modif accés basse-->
-                    </div>
-                    <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.";
-        // line 85
-        echo "</p><!--modif-->
-                </div>
-            </div>
-        </div>
+        echo "
+
+            ";
+        // line 106
+        echo "        </div>
 
     </div>
 
@@ -252,7 +194,7 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
 
     public function getDebugInfo()
     {
-        return array (  227 => 85,  222 => 82,  213 => 76,  206 => 71,  201 => 68,  192 => 62,  185 => 57,  180 => 54,  171 => 48,  164 => 43,  159 => 40,  150 => 34,  143 => 29,  138 => 26,  129 => 20,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  172 => 106,  168 => 34,  161 => 32,  153 => 29,  149 => 28,  144 => 26,  136 => 22,  132 => 19,  127 => 18,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -271,10 +213,28 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
     {% include 'barre_de_navigation.html.twig' %}
     <div class=\"acceuil-form\">
         <h3 class=\"nov\">Nouveautés</h3>
-        <!--ajouter une fonction pour afficher au maximun 5 posts triés du plus récent au moins récent
-        et aussi un for twig pour créer le bon nombre de div avec le last-post-->
+
         <div class=\"post-container\">
-            <div class=\"last-post\">
+
+            {% for annonce in annonces %}
+                <div class=\"last-post\">
+                    <div class=\"image-jeu\">
+                        {#{{annonce.images}}#}
+                        <button class=\"btn-jeu\" onclick=\"window.location.href={{path('app_Acceuil')}}\">Voir le jeu</button><!--A modifier le path-->
+                    </div>
+                    <div class=\"description\">
+                        <div class=\"date-form\">
+                            {{annonce.time}}
+                        </div>
+                        {{ annonce.title }}
+                        {{ annonce.content }}
+                    </div>
+            {% else %}
+
+            {% endfor %}
+
+
+            {#<div class=\"last-post\">
                 <div class=\"image-jeu\">
                     <img class=\"img-jeu\" src=\"{{ asset ('images/test.jpg') }}\"><!--modi accées bd-->
                     <button class=\"btn-jeu\" onclick=\"window.location.href='jeu'\">Voir le jeu</button>
@@ -282,10 +242,10 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"description\">
                     <div class=\"date-form\">
                         <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} </p><!--modif accés basse-->
                     </div>
                     <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} </p><!--modif-->
                 </div>
             </div>
             <div class=\"last-post\">
@@ -296,10 +256,10 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"description\">
                     <div class=\"date-form\">
                         <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} </p><!--modif accés basse-->
                     </div>
                     <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }}</p><!--modif-->
                 </div>
             </div>
             <div class=\"last-post\">
@@ -310,10 +270,10 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"description\">
                     <div class=\"date-form\">
                         <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} </p><!--modif accés basse-->
                     </div>
                     <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }}</p><!--modif-->
                 </div>
             </div>
             <div class=\"last-post\">
@@ -324,10 +284,10 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"description\">
                     <div class=\"date-form\">
                         <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }}</p><!--modif accés basse-->
                     </div>
                     <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} </p><!--modif-->
                 </div>
             </div>
             <div class=\"last-post\">
@@ -338,16 +298,16 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"description\">
                     <div class=\"date-form\">
                         <p class=\"date-txt text\">Date</p>
-                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} #}</p><!--modif accés basse-->
+                        <p class=\"date text\">20/25/2003 {# {{ app.jeu.date }} </p><!--modif accés basse-->
                     </div>
                     <p class=\"text titredes\">Description</p>
-                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }} #}</p><!--modif-->
+                    <p class=\"descri-jeu text\">Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.{# {{ app.jeu.description }}</p><!--modif-->
                 </div>
-            </div>
+            </div>#}
         </div>
 
     </div>
 
-{% endblock %}", "acceuil.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co à git\\GameTree\\templates\\acceuil.html.twig");
+{% endblock %}", "acceuil.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\acceuil.html.twig");
     }
 }

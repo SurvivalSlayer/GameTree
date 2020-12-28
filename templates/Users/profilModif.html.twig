@@ -19,6 +19,7 @@
                         <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
                     {% endif %}
                     {#<input type="file" id="img_profil" name="img_profil" class="text" value="Choisir un fichier"/>#}
+                    <label class="text" for="profileImage">Choisissez une image carré de préférence</label>
                     {{ form_start(ImageUpload) }}
                         {{ form_row(ImageUpload.image) }}
                         {{ form_row(ImageUpload.submit) }}
@@ -51,4 +52,5 @@
 
         </div>
     </div>
+    <script src="{{ asset('Scripts/afficheImage.js') }}"></script>
 {% endblock %}

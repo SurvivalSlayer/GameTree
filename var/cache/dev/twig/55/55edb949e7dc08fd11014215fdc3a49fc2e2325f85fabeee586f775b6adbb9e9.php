@@ -152,7 +152,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
             echo "
                         </div>
                     </div>
-                    
+
                 ";
             $context['_iterated'] = true;
         }
@@ -218,7 +218,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
     <div class=\"post-form\">
         <div class=\"post\">
             <h3 class=\"text-titre\">Vos publications</h3>
-            <button type=\"button\" onclick=\"window.location.href={{path('app_post_new')}}\" class=\"ajouter\">Publiez votre nouveau jeu</button>
+            <button type=\"button\" onclick=\"window.location.href={{ path('app_post_new') }}\" class=\"ajouter\">Publiez votre nouveau jeu</button>
             <div class=\"old-post-form\">
 
                 {% for annonce in annonces %}
@@ -232,7 +232,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
                             {{annonce.content}}
                         </div>
                     </div>
-                    
+
                 {% else %}
                     <div class=\"lesscontenu\">
                         <p class=\"text-lesscontenu\">Vous n'avez publiez aucun posts précédement...</p>

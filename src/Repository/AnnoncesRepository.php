@@ -48,9 +48,14 @@ class AnnoncesRepository extends ServiceEntityRepository
     }
     */
 
-    public function YourPost(){
+    public function YourPost($userID){
         return $this->createQueryBuilder('a')
             ->andWhere('a.user = :id')
+            ->setParameter('id', $userID)
+            ->orderBy('a.time', 'ASC')
+            ->setMaxResults(5)
+            ->getQuery()
+            ->getResult()
             ;
     }
 }

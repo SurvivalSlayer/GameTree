@@ -45,6 +45,16 @@ class Annonces
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="time")
+     */
+    private $time;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tags = [];
+
     public function __construct()
     {
         $this->imageAnnonces = new ArrayCollection();
@@ -148,6 +158,30 @@ class Annonces
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getTime(): ?\DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    public function setTime(\DateTimeInterface $time): self
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    public function getTags(): ?array
+    {
+        return $this->tags;
+    }
+
+    public function setTags(array $tags): self
+    {
+        $this->tags = $tags;
 
         return $this;
     }

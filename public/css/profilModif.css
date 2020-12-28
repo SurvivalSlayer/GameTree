@@ -21,16 +21,18 @@
     align-items: center;
 }
 .img-profile{
-    margin-bottom: 1em;
-    height: 7em;
-    width: auto;
+    display: block;
+    margin: 1em auto 0;
+    height: 10em;
+    width: 10em;
     border-radius: 50%;
 }
 .text{
     color: white;
     font-family: "Arial Rounded MT Bold",sans-serif;
-    margin: 1em 0.3em 1em 1em;
+    margin: 1em 1em 1em 1em;
 }
+
 
 input[type=file]{
     padding-bottom: 0.5em;

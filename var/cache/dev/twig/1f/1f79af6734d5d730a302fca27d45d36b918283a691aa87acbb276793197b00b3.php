@@ -121,8 +121,9 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
         <div class=\"jeu\">
             <div class=\"jeu-right\">
                 <div class=\"titre\">
-                    <h3 class=\"text txt-auteur\"> <strong>raockjie advenced ";
+                    <h3 class=\"text txt-auteur\"> <strong>";
         // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "annonces", [], "any", false, false, false, 17), "title", [], "any", false, false, false, 17), "html", null, true);
         echo "</strong></h3>
                 </div>
                 <div class=\"tag_form\">
@@ -218,7 +219,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
 
     public function getDebugInfo()
     {
-        return array (  191 => 60,  183 => 54,  173 => 46,  167 => 42,  161 => 38,  153 => 33,  143 => 26,  138 => 23,  135 => 22,  132 => 21,  126 => 17,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  192 => 60,  184 => 54,  174 => 46,  168 => 42,  162 => 38,  154 => 33,  144 => 26,  139 => 23,  136 => 22,  133 => 21,  126 => 17,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -239,7 +240,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
         <div class=\"jeu\">
             <div class=\"jeu-right\">
                 <div class=\"titre\">
-                    <h3 class=\"text txt-auteur\"> <strong>raockjie advenced {# {{ app.jeu.name }} #}</strong></h3>
+                    <h3 class=\"text txt-auteur\"> <strong>{{ app.annonces.title }}</strong></h3>
                 </div>
                 <div class=\"tag_form\">
                     <!--a modifier avec un for twig par rapport au nombre de tag-->
@@ -290,6 +291,6 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
             </div>
         </div>
     </div>
-{% endblock %}", "jeu.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co à git\\GameTree\\templates\\jeu.html.twig");
+{% endblock %}", "jeu.html.twig", "C:\\xampp\\htdocs\\Php\\Symfony\\1 co a git\\GameTree\\templates\\jeu.html.twig");
     }
 }

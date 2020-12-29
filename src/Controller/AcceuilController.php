@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Annonces;
 use App\Form\AnnoncesType;
+use App\Entity\User;
 use App\Repository\AnnoncesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,6 +21,14 @@ class AcceuilController extends AbstractController
         return $this->render('acceuil.html.twig', [
             'annonces' => $annoncesRepository->findAll(),
         ]);
+    }
+
+     /**
+     * @Route("/acceuil/annonce", name="app_annonce")
+     */
+    public function Annonce(){
+
+        return $this->render('jeu.html.twig');
     }
 
 }

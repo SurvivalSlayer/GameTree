@@ -133,9 +133,9 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                     <div class=\"image-jeu\">
                         ";
             // line 22
-            echo "                        <button class=\"btn-jeu\" onclick=\"window.location.href=";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_Acceuil");
-            echo "\">Voir le jeu</button><!--A modifier le path-->
+            echo "                        <button class=\"btn-jeu\" onclick=\"window.location.href='";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_annonce");
+            echo "';\">Voir le jeu</button><!--A modifier le path-->
                     </div>
                     <div class=\"description\">
                         <div class=\"date-form\">
@@ -220,7 +220,7 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                 <div class=\"last-post\">
                     <div class=\"image-jeu\">
                         {#{{annonce.images}}#}
-                        <button class=\"btn-jeu\" onclick=\"window.location.href={{path('app_Acceuil')}}\">Voir le jeu</button><!--A modifier le path-->
+                        <button class=\"btn-jeu\" onclick=\"window.location.href='{{path('app_annonce')}}';\">Voir le jeu</button><!--A modifier le path-->
                     </div>
                     <div class=\"description\">
                         <div class=\"date-form\">

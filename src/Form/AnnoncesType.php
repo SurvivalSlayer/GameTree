@@ -21,13 +21,13 @@ class AnnoncesType extends AbstractType
             ->add('tags', TextType::class)
             ->add('images', FileType::class, [
                 'label' => false,
-                'multiple' => true,
+                'multiple' => false,
                 'mapped' => false,
                 'required' => false
             ])
             ->add('files', FileType::class, [
                 'label' => false,
-                'multiple' => true,
+                'multiple' => false,
                 'mapped' => false,
                 'required' => false
             ])

@@ -24,18 +24,30 @@ class ApiController extends AbstractController
      */
     public function list(AnnoncesRepository $annoncesRepository){
         //on récupère la liste des annonces
-        $annonces = $annoncesRepository->findAll();
+        $annonces = $annoncesRepository->apiFindAll();
         
         //encodage json
         $encoders = [new JsonEncoder()];
 
         //normaliser converti collection to array
-        $normalizers = [new OjectNormalizer()];
+        $normalizers = [new ObjectNormalizer()];
 
         //on fait la convertion
         $serializer = new Serializer($normalizers, $encoders);
-        $jsonContent = $serializer->serialize($annonces, 'json');
-        dd($jsonContent);
+        $jsonContent = $serializer->serialize($annonces, 'json', [
+            'circular_reference_handler' => function($object){
+                return $object->getId();
+            }
+        ]);
+        
+        //on instance la réponse
+        $response = new Response($jsonContent);
+
+        //on ajoute l'entête HTTP
+        $response->headers->set('Content-Type', 'application/json');
+
+        //on envoie
+        return $response;
     }
 
 }   

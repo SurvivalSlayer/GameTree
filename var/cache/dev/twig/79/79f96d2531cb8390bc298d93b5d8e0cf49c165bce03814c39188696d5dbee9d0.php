@@ -115,53 +115,79 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
 
         // line 12
         echo "    <div class=\"jeu-form\">
-        <form class=\"jeu\">
+        <div class=\"jeu\">
+            ";
+        // line 14
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start', ["method" => "POST"]);
+        echo "
             <h3 class=\"text-titre\">Postez votre jeu</h3>
             <div class=\"descrip\">
+                <p class=\"text\">Entrez le titre de votre jeu*</p>
                 ";
-        // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "title", [], "any", false, false, false, 18), 'row');
         echo "
-                    ";
-        // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'widget');
-        echo "
-                    
-                    <div class=\"image-jeu\">
-                        ";
-        // line 21
-        echo "                    </div>
-
-                    <div class=\"telecharger\">
-                        ";
-        // line 25
-        echo "                    </div>
-
-
-                    <div class=\"validation\">
-                        ";
-        // line 30
-        echo "                        ";
-        // line 31
-        echo "                        <button type=\"button\" onclick=\"window.location.href='";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_post");
-        echo "';\" class=\"btn\">Annuler</button>
-                    </div>
+                <p class=\"txt-padding text\">Entrez une bref description de votre jeu*</p>
                 ";
-        // line 33
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "content", [], "any", false, false, false, 20), 'row');
         echo "
             </div>
+            <div class=\"tag_form\">
+                <p class=\"tag text txt-padding\">Ajouter les tags, séparé d'une virgule</p>
+                <div id=\"tag-list\" class=\"list-tag\">
+                    <button type=\"button\" id=\"1\" onclick=\"suppr(1)\" class=\"btn-tag\" aria-label=\"Retirer Aventure de la liste\">Aventure</button>
+                    <button type=\"button\" id=\"2\" onclick=\"suppr(2)\" class=\"btn-tag\" aria-label=\"Retirer Action de la liste\">Action</button>
+                    <button type=\"button\" id=\"3\" onclick=\"suppr(3)\" class=\"btn-tag\" aria-label=\"Retirer Course de la liste\">Course</button>
+                    <button type=\"button\" id=\"4\" onclick=\"suppr(4)\" class=\"btn-tag\" aria-label=\"Retirer FPS de la liste\">FPS</button>
+                    <button type=\"button\" id=\"5\" onclick=\"suppr(5)\" class=\"btn-tag\" aria-label=\"Retirer Combat de la liste\">Combat</button>
+                    <button type=\"button\" id=\"6\" onclick=\"suppr(6)\" class=\"btn-tag\" aria-label=\"Retirer MMO/MMORPG de la liste\">MMO/MMORPG</button>
+                    <button type=\"button\" id=\"7\" onclick=\"suppr(7)\" class=\"btn-tag\" aria-label=\"Retirer Simulation de la liste\">Simulation</button>
+                    <button type=\"button\" id=\"8\" onclick=\"suppr(8)\" class=\"btn-tag\" aria-label=\"Retirer Plate-forme de la liste\">Plate-forme</button>
+                    <button type=\"button\" id=\"9\" onclick=\"suppr(9)\" class=\"btn-tag\" aria-label=\"Retirer Réflexion de la liste\">Réflexion</button>
+                    <button type=\"button\" id=\"10\" onclick=\"suppr(10)\" class=\"btn-tag\" aria-label=\"Retirer Stratégie de la liste\">Stratégie</button>
+                    <button type=\"button\" id=\"11\" onclick=\"suppr(11)\" class=\"btn-tag\" aria-label=\"Retirer Autre de la liste\">Autre</button>
+                </div>
+                
+            </div>
+            <div class=\"image-jeu\">
+                <img class=\"img-jeu\" id=\"profileDisplay\" onclick=\"triggerClick()\" src=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
+        echo "\">
+                <label class=\"text\" for=\"profileImage\">Choisissez une image</label>
                 ";
-        // line 69
-        echo "        </form>
+        // line 43
+        echo "                ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "images", [], "any", false, false, false, 43), 'row');
+        echo "
+            </div>
+            <div class=\"telecharger\">
+                <p class=\"text-telechargement txt-padding text\">Ajoutez votre jeu en éxécutable</p>
+                ";
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 47, $this->source); })()), "files", [], "any", false, false, false, 47), 'row');
+        echo "
+            </div>
+            <div class=\"validation\">
+                <button type=\"submit\" class=\"btn\">Valider</button>
+                <button type=\"button\" onclick=\"window.location.href='";
+        // line 51
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_post");
+        echo "';\" class=\"btn\">Annuler</button>
+            </div>
+            ";
+        // line 53
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 53, $this->source); })()), 'form_end');
+        echo "
+        </div>
     </div>
     <script src=\"";
-        // line 71
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/afficheImage.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 72
+        // line 57
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/suppr.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -185,7 +211,7 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
 
     public function getDebugInfo()
     {
-        return array (  165 => 72,  161 => 71,  157 => 69,  152 => 33,  146 => 31,  144 => 30,  138 => 25,  133 => 21,  127 => 17,  123 => 16,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  191 => 57,  187 => 56,  181 => 53,  176 => 51,  169 => 47,  161 => 43,  156 => 40,  133 => 20,  128 => 18,  121 => 14,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -202,35 +228,17 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
 
 {% block body %}
     <div class=\"jeu-form\">
-        <form class=\"jeu\">
+        <div class=\"jeu\">
+            {{ form_start(form,{'method': 'POST'}) }}
             <h3 class=\"text-titre\">Postez votre jeu</h3>
             <div class=\"descrip\">
-                {{ form_start(form) }}
-                    {{ form_widget(form) }}
-                    
-                    <div class=\"image-jeu\">
-                        {#{{ form_row(form.images) }}#}
-                    </div>
-
-                    <div class=\"telecharger\">
-                        {#{{ form_row(form.files) }}#}
-                    </div>
-
-
-                    <div class=\"validation\">
-                        {#{{ form_row(form.valider, {label: \"Valider\",'label_attr': {'class': 'btn'}}) }}#}
-                        {#<button type=\"submit\" class=\"btn\">Valider</button>#}
-                        <button type=\"button\" onclick=\"window.location.href='{{path('app_post')}}';\" class=\"btn\">Annuler</button>
-                    </div>
-                {{ form_end(form) }}
-            </div>
-                {#<p class=\"text\">Entrez le titre de votre jeu*</p>
-                <input type=\"text\" class=\"titre\" required=\"required\"/>
+                <p class=\"text\">Entrez le titre de votre jeu*</p>
+                {{ form_row(form.title)}}
                 <p class=\"txt-padding text\">Entrez une bref description de votre jeu*</p>
-                <textarea cols=\"35\" rows=\"5\" type=\"text\" class=\"description\" maxlength=\"1000\" placeholder=\"1000 caractères maximum\" required=\"required\"></textarea>
+                {{ form_row(form.content)}}
             </div>
             <div class=\"tag_form\">
-                <p class=\"tag text txt-padding\">Supprimez de la liste les tags qui ne correspondent pas à votre jeu</p>
+                <p class=\"tag text txt-padding\">Ajouter les tags, séparé d'une virgule</p>
                 <div id=\"tag-list\" class=\"list-tag\">
                     <button type=\"button\" id=\"1\" onclick=\"suppr(1)\" class=\"btn-tag\" aria-label=\"Retirer Aventure de la liste\">Aventure</button>
                     <button type=\"button\" id=\"2\" onclick=\"suppr(2)\" class=\"btn-tag\" aria-label=\"Retirer Action de la liste\">Action</button>
@@ -244,21 +252,24 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
                     <button type=\"button\" id=\"10\" onclick=\"suppr(10)\" class=\"btn-tag\" aria-label=\"Retirer Stratégie de la liste\">Stratégie</button>
                     <button type=\"button\" id=\"11\" onclick=\"suppr(11)\" class=\"btn-tag\" aria-label=\"Retirer Autre de la liste\">Autre</button>
                 </div>
+                
             </div>
             <div class=\"image-jeu\">
                 <img class=\"img-jeu\" id=\"profileDisplay\" onclick=\"triggerClick()\" src=\"{{ asset('images/test.jpg') }}\">
                 <label class=\"text\" for=\"profileImage\">Choisissez une image</label>
-                <input class=\"file text\" type=\"file\" name=\"profileImage\" onchange=\"displayImage(this)\" id=\"profileImage\" style=\"display: none;\"  accept=\".jpg, .jpeg, .png\" required=\"required\"/>
+                {#<input class=\"file text\" type=\"file\" name=\"profileImage\" onchange=\"displayImage(this)\" id=\"profileImage\" style=\"display: none;\"  accept=\".jpg, .jpeg, .png\" required=\"required\"/>#}
+                {{ form_row(form.images)}}
             </div>
             <div class=\"telecharger\">
                 <p class=\"text-telechargement txt-padding text\">Ajoutez votre jeu en éxécutable</p>
-                <input type=\"file\" class=\"file text\" value=\"Choisir un fichier\" accept=\".exe, .apk, .zip\" required=\"required\"/>
+                {{ form_row(form.files)}}
             </div>
             <div class=\"validation\">
                 <button type=\"submit\" class=\"btn\">Valider</button>
-                <button type=\"button\" onclick=\"window.location.href={{path('app_post')}}\" class=\"btn\">Annuler</button>
-            </div>#}
-        </form>
+                <button type=\"button\" onclick=\"window.location.href='{{path('app_post')}}';\" class=\"btn\">Annuler</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
     </div>
     <script src=\"{{ asset('Scripts/afficheImage.js') }}\"></script>
     <script src=\"{{ asset('Scripts/suppr.js') }}\"></script>

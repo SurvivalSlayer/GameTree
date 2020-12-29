@@ -140,14 +140,14 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
             // line 24
             echo "                        </div>
                         <div class=\"description\">
-                            ";
+                            <p class=\"text titredes\">";
             // line 26
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "title", [], "any", false, false, false, 26), "html", null, true);
-            echo "
-                            ";
+            echo "</p>
+                            <p class=\"descri-jeu\">";
             // line 27
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "content", [], "any", false, false, false, 27), "html", null, true);
-            echo "
+            echo "</p>
                         </div>
                     </div>
 
@@ -226,8 +226,8 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
                             {#{{annonce.images}}#}
                         </div>
                         <div class=\"description\">
-                            {{annonce.title}}
-                            {{annonce.content}}
+                            <p class=\"text titredes\">{{annonce.title}}</p>
+                            <p class=\"descri-jeu\">{{annonce.content}}</p>
                         </div>
                     </div>
 

@@ -22,9 +22,6 @@ class AnnoncesType extends AbstractType
             ->add('content',TextType::class, [
                 'attr' => ['class' => 'description'],
             ])
-            ->add('tags', TextType::class, [
-                'attr' => ['class' => 'titre'],
-            ])
             ->add('images', FileType::class, [
                 'label' => false,
                 'multiple' => false,
@@ -39,17 +36,6 @@ class AnnoncesType extends AbstractType
                 'required' => false,
                 'attr' => ['class' => 'file text']
             ])
-        ;
-        $builder->get('tags')->addModelTransformer(new CallbackTransformer(
-            function ($tagsAsArray) {
-                // transform the array to a string
-                return implode(', ', $tagsAsArray);
-            },
-            function ($tagsAsString) {
-                // transform the string back to an array
-                return explode(', ', $tagsAsString);
-            }
-        ))
         ;
     }
 

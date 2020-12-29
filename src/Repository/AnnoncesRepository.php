@@ -52,8 +52,26 @@ class AnnoncesRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('a')
             ->andWhere('a.user = :id')
             ->setParameter('id', $userID)
-            //->orderBy('a.time', 'ASC')
+            ->orderBy('a.time', 'ASC')
             ->setMaxResults(5)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function apiFindAnnonce($key_word){
+        return $this->createQueryBuilder('a')
+            ->select('a.id', 'a.title', 'a.content')
+            ->andWhere('a.title = :title')
+            ->setParameter('title', $key_word)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function apiFindAll(){
+        return $this->createQueryBuilder('a')
+            ->select('a.id', 'a.title', 'a.content')
             ->getQuery()
             ->getResult()
             ;

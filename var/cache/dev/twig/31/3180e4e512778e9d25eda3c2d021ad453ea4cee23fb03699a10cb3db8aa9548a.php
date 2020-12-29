@@ -102,8 +102,11 @@ class __TwigTemplate_60daabc16c70ed31a4d82296f1e6ace65d3256053cdef1a459113a89a7a
                 </ul>
             </div>
             <form action=\"#\" method=\"post\" class=\"form-search\">
-                <input type=\"search\" name=\"search\" class=\"bar-search\" placeholder=\"Rechercher\">
-                <button id=\"loupe\" type=\"submit\"></button>
+                ";
+        // line 24
+        echo "                <button id=\"loupe\" type=\"button\" onclick=\"window.location.href='";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_recherche");
+        echo "';\"></button>
             </form>
 
         </nav>
@@ -128,7 +131,7 @@ class __TwigTemplate_60daabc16c70ed31a4d82296f1e6ace65d3256053cdef1a459113a89a7a
 
     public function getDebugInfo()
     {
-        return array (  100 => 19,  96 => 18,  92 => 17,  83 => 11,  79 => 9,  69 => 8,  58 => 29,  56 => 8,  50 => 5,  44 => 1,);
+        return array (  107 => 24,  100 => 19,  96 => 18,  92 => 17,  83 => 11,  79 => 9,  69 => 8,  58 => 29,  56 => 8,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -155,8 +158,8 @@ class __TwigTemplate_60daabc16c70ed31a4d82296f1e6ace65d3256053cdef1a459113a89a7a
                 </ul>
             </div>
             <form action=\"#\" method=\"post\" class=\"form-search\">
-                <input type=\"search\" name=\"search\" class=\"bar-search\" placeholder=\"Rechercher\">
-                <button id=\"loupe\" type=\"submit\"></button>
+                {#<input type=\"search\" name=\"search\" class=\"bar-search\" placeholder=\"Rechercher\">#}
+                <button id=\"loupe\" type=\"button\" onclick=\"window.location.href='{{path('app_recherche')}}';\"></button>
             </form>
 
         </nav>

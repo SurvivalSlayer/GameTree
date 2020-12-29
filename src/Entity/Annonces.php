@@ -46,11 +46,6 @@ class Annonces
     private $user;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $tags = [];
-
-    /**
      * @ORM\Column(type="datetime")
      */
     private $time;
@@ -158,18 +153,6 @@ class Annonces
     public function setUser(?User $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getTags(): ?array
-    {
-        return $this->tags;
-    }
-
-    public function setTags(array $tags): self
-    {
-        $this->tags = $tags;
 
         return $this;
     }

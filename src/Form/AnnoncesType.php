@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AnnoncesType extends AbstractType
 {
@@ -29,6 +30,9 @@ class AnnoncesType extends AbstractType
                 'multiple' => true,
                 'mapped' => false,
                 'required' => false
+            ])
+            ->add('valider', SubmitType::class, [
+                'attr' => ['class' => 'btn'],
             ])
         ;
         $builder->get('tags')->addModelTransformer(new CallbackTransformer(

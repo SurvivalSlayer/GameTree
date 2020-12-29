@@ -10,17 +10,20 @@
 {% block body %}
     {% include 'barre_de_navigation.html.twig' %}
     <div id="profile-form">
+        
         <div id="profile">
             <div id="logos-top">
-                <button id="deconnection" class="icon-top" type="button" onclick="window.location.href = 'connexion';"></button>
+                <button id="deconnection" class="icon-top" type="button" onclick="window.location.href='{{path('app_logout')}}' ;"></button>
                 <div id="photo-profil">
-                    {# {% if user.file %} #}<!--a modifier par rapport à ta base de donnée-->
-                    <!--<img src="{# { vich_uploader_asset(user, 'file')| filter('thumbnail')}} #}" />asset a modifier par rapport à ta base de donnée-->
-                    {# {% else %} #}
-                    <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
-                    {# {% endif %} #}
+                    {% if app.user.images %}
+                        {% for image in app.user.images %}
+                            <img class="img-profile" src="{{ asset('/uploads/image_profils/' ~ image.name) }}">
+                        {% endfor %}
+                    {% else %}
+                        <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
+                    {% endif %}
                 </div>
-                <button id="modif" class="icon-top" type="button" onclick="window.location.href = 'modif';"></button>
+                <button id="modif" class="icon-top" type="button" onclick="window.location.href='{{path('app_EditProfile')}}';"></button>
 
             </div>
 
@@ -35,7 +38,7 @@
                     <p class="dynamic-text text">{{ app.user.username }}</p>
                     <p class="dynamic-text text" >non affiché</p>
                 </div>
-                <a href="{{ path('app_EditProfile') }}" class="nav-link">modifier Profil</a>
+                <a href="{{ path('app_EditProfileImage') }}" class="nav-link">modifier image de profil</a>
             </div>
         </div>
     </div>

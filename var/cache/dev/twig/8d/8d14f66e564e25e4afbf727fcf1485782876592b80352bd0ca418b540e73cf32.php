@@ -118,44 +118,6 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
         // line 12
         echo "    <div id=\"profile-form\">
         <div class=\"profile\">
-            <div id=\"modif-img\">
-                <div id=\"photo-profil\">
-                    ";
-        // line 16
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "images", [], "any", false, false, false, 16)) {
-            // line 17
-            echo "                        ";
-            // line 18
-            echo "                    ";
-        } else {
-            // line 19
-            echo "                        <img class=\"img-profile\" src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/img_default.jpg"), "html", null, true);
-            echo "\" />
-                    ";
-        }
-        // line 21
-        echo "                    ";
-        // line 22
-        echo "                    <label class=\"text\" for=\"profileImage\">Choisissez une image carré de préférence</label>
-                    ";
-        // line 23
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 23, $this->source); })()), 'form_start');
-        echo "
-                        ";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 24, $this->source); })()), "image", [], "any", false, false, false, 24), 'row');
-        echo "
-                        ";
-        // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 25, $this->source); })()), "submit", [], "any", false, false, false, 25), 'row');
-        echo "
-                    ";
-        // line 26
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ImageUpload"]) || array_key_exists("ImageUpload", $context) ? $context["ImageUpload"] : (function () { throw new RuntimeError('Variable "ImageUpload" does not exist.', 26, $this->source); })()), 'form_end');
-        echo "
-                </div>
-            </div>
             <form method=\"post\">
                 <div id=\"user-info\">
                     <div id=\"info-static\">
@@ -167,8 +129,8 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                     </div>
                     <div id=\"info-dynamic\">
                         <input type=\"text\" id=\"username\" name=\"username\" class=\"dynamic-text text\" placeholder=\"";
-        // line 39
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "username", [], "any", false, false, false, 39), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24), "username", [], "any", false, false, false, 24), "html", null, true);
         echo "\"/>
                         <input type=\"password\" id=\"pass\" name=\"pass\" class=\"dynamic-text text\"/>
                         <input type=\"password\" id=\"pass2\" name=\"pass2\" class=\"dynamic-text text\"/>
@@ -178,10 +140,10 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                 <div class=\"validation-form\">
                     <div class=\"validation\">
                         <button class=\"bg\" type=\"submit\">Valider</button>
-                        <button class=\"bg\" type=\"button\" onclick=\"window.location.href=";
-        // line 48
+                        <button class=\"bg\" type=\"button\" onclick=\"window.location.href='";
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_Profile");
-        echo "\">Annuler</button>
+        echo "';\">Annuler</button>
                     </div>
                 </div>
             </form>
@@ -189,7 +151,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
         </div>
     </div>
     <script src=\"";
-        // line 55
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/afficheImage.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -213,7 +175,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
 
     public function getDebugInfo()
     {
-        return array (  193 => 55,  183 => 48,  171 => 39,  155 => 26,  151 => 25,  147 => 24,  143 => 23,  140 => 22,  138 => 21,  132 => 19,  129 => 18,  127 => 17,  125 => 16,  119 => 12,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  155 => 40,  145 => 33,  133 => 24,  119 => 12,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -231,21 +193,6 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
     {% include 'barre_de_navigation.html.twig' %}
     <div id=\"profile-form\">
         <div class=\"profile\">
-            <div id=\"modif-img\">
-                <div id=\"photo-profil\">
-                    {% if app.user.images %}
-                        {#<img src=\" { vich_uploader_asset(user, 'file')| filter('thumbnail')}}\" />#}
-                    {% else %}
-                        <img class=\"img-profile\" src=\"{{ asset ('images/img_default.jpg') }}\" />
-                    {% endif %}
-                    {#<input type=\"file\" id=\"img_profil\" name=\"img_profil\" class=\"text\" value=\"Choisir un fichier\"/>#}
-                    <label class=\"text\" for=\"profileImage\">Choisissez une image carré de préférence</label>
-                    {{ form_start(ImageUpload) }}
-                        {{ form_row(ImageUpload.image) }}
-                        {{ form_row(ImageUpload.submit) }}
-                    {{ form_end(ImageUpload) }}
-                </div>
-            </div>
             <form method=\"post\">
                 <div id=\"user-info\">
                     <div id=\"info-static\">
@@ -265,7 +212,7 @@ class __TwigTemplate_ace846a312def7da8f6e6bb0e08b1aec3081d8a370be3e85c68573d9ca8
                 <div class=\"validation-form\">
                     <div class=\"validation\">
                         <button class=\"bg\" type=\"submit\">Valider</button>
-                        <button class=\"bg\" type=\"button\" onclick=\"window.location.href={{path('app_Profile')}}\">Annuler</button>
+                        <button class=\"bg\" type=\"button\" onclick=\"window.location.href='{{path('app_Profile')}}';\">Annuler</button>
                     </div>
                 </div>
             </form>

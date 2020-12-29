@@ -4,7 +4,6 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/connexion.css') }}">
 {% endblock %}
 
@@ -37,15 +36,13 @@
                         <input type="password" name="password" id="inputPassword" class="form-control" required>
                     </div>
 
-                    <input type="hidden" name="_csrf_token"
-                            value="{{ csrf_token('authenticate') }}"
-                    >
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
                     <div class="form-submit ">
                         <input type="submit" name="submit" value="Connexion"/>
                     </div>
-
                     <div id="register-link">
-                        <a href="{{path('app_register')}}">Register ?</a>                  
+                        <input type="button" value="S'identifier" class="form-button-connect text-info"/>
+                        <input type="button" onclick="window.location.href = 'register';" value="S'inscrire" class="form-button-idenf text-info"/>
                     </div>
 
                 </form>

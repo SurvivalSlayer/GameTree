@@ -126,28 +126,42 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
         // line 17
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'widget');
         echo "
+                    
+                    <div class=\"image-jeu\">
+                        ";
+        // line 21
+        echo "                    </div>
+
+                    <div class=\"telecharger\">
+                        ";
+        // line 25
+        echo "                    </div>
+
+
                     <div class=\"validation\">
-                        <button type=\"submit\" class=\"btn\">Valider</button>
-                        <button type=\"button\" onclick=\"window.location.href=";
-        // line 20
+                        ";
+        // line 30
+        echo "                        ";
+        // line 31
+        echo "                        <button type=\"button\" onclick=\"window.location.href='";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_post");
-        echo "\" class=\"btn\">Annuler</button>
+        echo "';\" class=\"btn\">Annuler</button>
                     </div>
                 ";
-        // line 22
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        // line 33
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
         echo "
             </div>
                 ";
-        // line 58
+        // line 69
         echo "        </form>
     </div>
     <script src=\"";
-        // line 60
+        // line 71
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/afficheImage.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 61
+        // line 72
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Scripts/suppr.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -171,7 +185,7 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
 
     public function getDebugInfo()
     {
-        return array (  151 => 61,  147 => 60,  143 => 58,  138 => 22,  133 => 20,  127 => 17,  123 => 16,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  165 => 72,  161 => 71,  157 => 69,  152 => 33,  146 => 31,  144 => 30,  138 => 25,  133 => 21,  127 => 17,  123 => 16,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -193,9 +207,20 @@ class __TwigTemplate_d6ffd54c43c091bdb7675768668fd2f9789d7464dda8cf42e4f4ea6b431
             <div class=\"descrip\">
                 {{ form_start(form) }}
                     {{ form_widget(form) }}
+                    
+                    <div class=\"image-jeu\">
+                        {#{{ form_row(form.images) }}#}
+                    </div>
+
+                    <div class=\"telecharger\">
+                        {#{{ form_row(form.files) }}#}
+                    </div>
+
+
                     <div class=\"validation\">
-                        <button type=\"submit\" class=\"btn\">Valider</button>
-                        <button type=\"button\" onclick=\"window.location.href={{path('app_post')}}\" class=\"btn\">Annuler</button>
+                        {#{{ form_row(form.valider, {label: \"Valider\",'label_attr': {'class': 'btn'}}) }}#}
+                        {#<button type=\"submit\" class=\"btn\">Valider</button>#}
+                        <button type=\"button\" onclick=\"window.location.href='{{path('app_post')}}';\" class=\"btn\">Annuler</button>
                     </div>
                 {{ form_end(form) }}
             </div>

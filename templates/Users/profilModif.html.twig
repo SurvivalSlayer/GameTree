@@ -11,21 +11,6 @@
     {% include 'barre_de_navigation.html.twig' %}
     <div id="profile-form">
         <div class="profile">
-            <div id="modif-img">
-                <div id="photo-profil">
-                    {% if app.user.images %}
-                        {#<img src=" { vich_uploader_asset(user, 'file')| filter('thumbnail')}}" />#}
-                    {% else %}
-                        <img class="img-profile" src="{{ asset ('images/img_default.jpg') }}" />
-                    {% endif %}
-                    {#<input type="file" id="img_profil" name="img_profil" class="text" value="Choisir un fichier"/>#}
-                    <label class="text" for="profileImage">Choisissez une image carré de préférence</label>
-                    {{ form_start(ImageUpload) }}
-                        {{ form_row(ImageUpload.image) }}
-                        {{ form_row(ImageUpload.submit) }}
-                    {{ form_end(ImageUpload) }}
-                </div>
-            </div>
             <form method="post">
                 <div id="user-info">
                     <div id="info-static">
@@ -45,7 +30,7 @@
                 <div class="validation-form">
                     <div class="validation">
                         <button class="bg" type="submit">Valider</button>
-                        <button class="bg" type="button" onclick="window.location.href={{path('app_Profile')}}">Annuler</button>
+                        <button class="bg" type="button" onclick="window.location.href='{{path('app_Profile')}}';">Annuler</button>
                     </div>
                 </div>
             </form>

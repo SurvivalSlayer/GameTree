@@ -120,10 +120,10 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
         echo "    <div class=\"post-form\">
         <div class=\"post\">
             <h3 class=\"text-titre\">Vos publications</h3>
-            <button type=\"button\" onclick=\"window.location.href=";
+            <button type=\"button\" onclick=\"window.location.href='";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_post_new");
-        echo "\" class=\"ajouter\">Publiez votre nouveau jeu</button>
+        echo "';\" class=\"ajouter\">Publiez votre nouveau jeu</button>
             <div class=\"old-post-form\">
 
                 ";
@@ -218,7 +218,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
     <div class=\"post-form\">
         <div class=\"post\">
             <h3 class=\"text-titre\">Vos publications</h3>
-            <button type=\"button\" onclick=\"window.location.href={{ path('app_post_new') }}\" class=\"ajouter\">Publiez votre nouveau jeu</button>
+            <button type=\"button\" onclick=\"window.location.href='{{ path('app_post_new') }}';\" class=\"ajouter\">Publiez votre nouveau jeu</button>
             <div class=\"old-post-form\">
 
                 {% for annonce in annonces %}

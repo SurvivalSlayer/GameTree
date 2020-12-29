@@ -4,7 +4,6 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/connexion.css') }}">
 {% endblock %}
 
@@ -17,24 +16,23 @@
     <div id="login-widht">
         <div id="login">
             <div class="container">
-
+                {{ form_start(registrationForm, {'method': 'POST'})  }}
                 <h3>Créer votre compte</h3>
-
-                {{ form_start(registrationForm) }}
                     <div class="form-group">
-                        {{ form_row(registrationForm.username) }}
+                        {{ form_row(registrationForm.username,{label: "Nom d'utilisateur",'label_attr': {'class': 'text-info'}} ) }}
                     </div>
                     <div class="form-group">
                         {{ form_row(registrationForm.plainPassword, {
-                            label: 'Password'
+                            label: 'Mot de passe','label_attr': {'class': 'text-info'}
                         }) }}
-                    </div>
-                    <div class="form-group">   
-                        {{ form_row(registrationForm.agreeTerms) }}
                     </div>
                     <div class="form-submit ">
                         {#<button type="submit" class="btn">Register</button>#}
                         <input type="submit" name="submit" value="Valider">
+                    </div>
+                    <div id="register-link">
+                        <input type="button" onclick="window.location.href = '/';" value="S'identifier" class="form-button-idenf text-info"/>
+                        <input type="button" value="S'inscrire" class="form-button-connect text-info"/>
                     </div>
                 {{ form_end(registrationForm) }}
             </div>

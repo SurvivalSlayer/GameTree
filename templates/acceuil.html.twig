@@ -23,10 +23,11 @@
                     </div>
                     <div class="description">
                         <div class="date-form">
-                            {{annonce.time}}
+                            <p class="date-txt text">Date</p>
+                            <p class="date text">{#{{annonce.time}}#}</p>
                         </div>
-                        {{ annonce.title }}
-                        {{ annonce.content }}
+                            <p class="date-txt text">{{ annonce.title }}</p>
+                            <p class="descri-jeu text">{{ annonce.content }}</p>
                     </div>
             {% else %}
 

@@ -15,9 +15,20 @@
             <div class="descrip">
                 {{ form_start(form) }}
                     {{ form_widget(form) }}
+                    
+                    <div class="image-jeu">
+                        {#{{ form_row(form.images) }}#}
+                    </div>
+
+                    <div class="telecharger">
+                        {#{{ form_row(form.files) }}#}
+                    </div>
+
+
                     <div class="validation">
-                        <button type="submit" class="btn">Valider</button>
-                        <button type="button" onclick="window.location.href={{path('app_post')}}" class="btn">Annuler</button>
+                        {#{{ form_row(form.valider, {label: "Valider",'label_attr': {'class': 'btn'}}) }}#}
+                        {#<button type="submit" class="btn">Valider</button>#}
+                        <button type="button" onclick="window.location.href='{{path('app_post')}}';" class="btn">Annuler</button>
                     </div>
                 {{ form_end(form) }}
             </div>

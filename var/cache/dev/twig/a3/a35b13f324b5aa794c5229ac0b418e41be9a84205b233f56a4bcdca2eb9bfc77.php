@@ -139,36 +139,36 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                     </div>
                     <div class=\"description\">
                         <div class=\"date-form\">
-                            ";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "time", [], "any", false, false, false, 26), "html", null, true);
-            echo "
+                            <p class=\"date-txt text\">Date</p>
+                            <p class=\"date text\">";
+            // line 27
+            echo "</p>
                         </div>
-                        ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "title", [], "any", false, false, false, 28), "html", null, true);
-            echo "
-                        ";
+                            <p class=\"date-txt text\">";
             // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "content", [], "any", false, false, false, 29), "html", null, true);
-            echo "
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "title", [], "any", false, false, false, 29), "html", null, true);
+            echo "</p>
+                            <p class=\"descri-jeu text\">";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "content", [], "any", false, false, false, 30), "html", null, true);
+            echo "</p>
                     </div>
             ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 32
+            // line 33
             echo "
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 35
         echo "
 
             ";
-        // line 106
+        // line 107
         echo "        </div>
 
     </div>
@@ -194,7 +194,7 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
 
     public function getDebugInfo()
     {
-        return array (  172 => 106,  168 => 34,  161 => 32,  153 => 29,  149 => 28,  144 => 26,  136 => 22,  132 => 19,  127 => 18,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  172 => 107,  168 => 35,  161 => 33,  153 => 30,  149 => 29,  145 => 27,  136 => 22,  132 => 19,  127 => 18,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -224,10 +224,11 @@ class __TwigTemplate_7be5a72dc1a8da7af97f93b01e2e668d408d58848ce89d43ca1788ef2c5
                     </div>
                     <div class=\"description\">
                         <div class=\"date-form\">
-                            {{annonce.time}}
+                            <p class=\"date-txt text\">Date</p>
+                            <p class=\"date text\">{#{{annonce.time}}#}</p>
                         </div>
-                        {{ annonce.title }}
-                        {{ annonce.content }}
+                            <p class=\"date-txt text\">{{ annonce.title }}</p>
+                            <p class=\"descri-jeu text\">{{ annonce.content }}</p>
                     </div>
             {% else %}
 

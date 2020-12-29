@@ -110,21 +110,28 @@ class __TwigTemplate_0f4b339d52a632ed845dffcbb3a4c22db57dcc3a2b441d2649cbc4b35be
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["annonce"]) || array_key_exists("annonce", $context) ? $context["annonce"] : (function () { throw new RuntimeError('Variable "annonce" does not exist.', 20, $this->source); })()), "content", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>Tags</th>
+                <td>";
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["annonce"]) || array_key_exists("annonce", $context) ? $context["annonce"] : (function () { throw new RuntimeError('Variable "annonce" does not exist.', 24, $this->source); })()), "tags", [], "any", false, false, false, 24), "html", null, true);
+        echo "</td>
+            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 25
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonces_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonces_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["annonce"]) || array_key_exists("annonce", $context) ? $context["annonce"] : (function () { throw new RuntimeError('Variable "annonce" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonces_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["annonce"]) || array_key_exists("annonce", $context) ? $context["annonce"] : (function () { throw new RuntimeError('Variable "annonce" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 29
+        // line 33
         echo twig_include($this->env, $context, "annonces/_delete_form.html.twig");
         echo "
 ";
@@ -148,7 +155,7 @@ class __TwigTemplate_0f4b339d52a632ed845dffcbb3a4c22db57dcc3a2b441d2649cbc4b35be
 
     public function getDebugInfo()
     {
-        return array (  128 => 29,  123 => 27,  118 => 25,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  135 => 33,  130 => 31,  125 => 29,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +180,10 @@ class __TwigTemplate_0f4b339d52a632ed845dffcbb3a4c22db57dcc3a2b441d2649cbc4b35be
             <tr>
                 <th>Content</th>
                 <td>{{ annonce.content }}</td>
+            </tr>
+            <tr>
+                <th>Tags</th>
+                <td>{{ annonce.tags }}</td>
             </tr>
         </tbody>
     </table>

@@ -24,11 +24,19 @@ class AcceuilController extends AbstractController
     }
 
      /**
-     * @Route("/acceuil/annonce", name="app_annonce")
+     * @Route("/acceuil/annonce", name="app_annonce", methods={"GET"})
      */
-    public function Annonce(){
-
+    public function Annonce(): Response
+    {
         return $this->render('jeu.html.twig');
+    }
+
+    /**
+     * @Route("/acceuil/recherche", name="app_recherche")
+     */
+    public function Recherche(): Response
+    {
+        return $this->render('recherche.html.twig');
     }
 
 }

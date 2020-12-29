@@ -14,13 +14,14 @@
         <div class="jeu">
             <div class="jeu-right">
                 <div class="titre">
-                    <h3 class="text txt-auteur"> <strong>{{ app.annonces }}</strong></h3>
+                    <h3 class="text txt-auteur"> <strong>{{ app.annonce.user.username }}</strong></h3>
                 </div>
                 <div class="tag_form">
-                    <!--a modifier avec un for twig par rapport au nombre de tag-->
-                    <p class="tag text">action {# {{ app.jeu.name }} #}</p>
-                    <p class="tag text">plateform {# {{ app.jeu.name }} #}</p>
-                    <p class="tag text">réflexion {# {{ app.jeu.name }} #}</p>
+                    {#<!--a modifier avec un for twig par rapport au nombre de tag-->
+                    <p class="tag text">action {# {{ app.jeu.name }} </p>
+                    <p class="tag text">plateform {# {{ app.jeu.name }} </p>
+                    <p class="tag text">réflexion {# {{ app.jeu.name }} </p>#}
+
                 </div>
                 <div class="image-jeu">
                     <img class="img-jeu" src="{{ asset('images/test.jpg') }}">
@@ -51,7 +52,7 @@
                     <div class="descrip-form">
                         <div class="descrip">
                             <h3 class="text txt-descrip">Description</h3>
-                            <p class="textg txt-des">petit test à remplacer par l'accés à la base de donnée{# {{ app.jeu.description }} #}</p>
+                            <p class="textg txt-des">{{ app.annonce.content }}</p>
                         </div>
                     </div>
 

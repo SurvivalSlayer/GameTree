@@ -284,11 +284,18 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\AcceuilController"/>
       </call>
     </service>
-    <service id="App\Controller\AnnoncesControllerV2" class="App\Controller\AnnoncesControllerV2" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\AnnoncesController" class="App\Controller\AnnoncesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\AnnoncesControllerV2"/>
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\AnnoncesController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ApiController" class="App\Controller\ApiController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\ApiController"/>
       </call>
     </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
@@ -3857,9 +3864,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AnnoncesControllerV2" class="App\Controller\AnnoncesControllerV2" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AnnoncesControllerV2" class="App\Controller\AnnoncesControllerV2" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\AnnoncesControllerV2" class="App\Controller\AnnoncesControllerV2" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AnnoncesController" class="App\Controller\AnnoncesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AnnoncesController" class="App\Controller\AnnoncesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AnnoncesController" class="App\Controller\AnnoncesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ApiController" class="App\Controller\ApiController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ApiController" class="App\Controller\ApiController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ApiController" class="App\Controller\ApiController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4172,11 +4182,12 @@
         <argument key="request" type="service" id=".errored.LVtpwWA"/>
       </argument>
     </service>
-    <service id=".service_locator.UD.qrhU" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.w2g3KnF" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AcceuilController::HomePage" type="service" id=".service_locator.FrIHHjC"/>
-        <argument key="App\Controller\AnnoncesControllerV2::Post" type="service" id=".service_locator.FrIHHjC"/>
+        <argument key="App\Controller\AnnoncesController::Post" type="service" id=".service_locator.FrIHHjC"/>
+        <argument key="App\Controller\ApiController::list" type="service" id=".service_locator.FrIHHjC"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.LfWppqE"/>
         <argument key="App\Controller\SecurityController::index" type="service" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\UserController::EditProfilePage" type="service" id=".service_locator.pwZ6MTM"/>
@@ -4188,7 +4199,8 @@
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.KfwZsne"/>
         <argument key="App\Controller\AcceuilController:HomePage" type="service" id=".service_locator.FrIHHjC"/>
-        <argument key="App\Controller\AnnoncesControllerV2:Post" type="service" id=".service_locator.FrIHHjC"/>
+        <argument key="App\Controller\AnnoncesController:Post" type="service" id=".service_locator.FrIHHjC"/>
+        <argument key="App\Controller\ApiController:list" type="service" id=".service_locator.FrIHHjC"/>
         <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.LfWppqE"/>
         <argument key="App\Controller\SecurityController:index" type="service" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\UserController:EditProfilePage" type="service" id=".service_locator.pwZ6MTM"/>
@@ -4324,9 +4336,15 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
-    <service id=".service_locator.5nX7ca3.App\Controller\AnnoncesControllerV2" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AnnoncesControllerV2"/>
-      <argument>App\Controller\AnnoncesControllerV2</argument>
+    <service id=".service_locator.5nX7ca3.App\Controller\AnnoncesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AnnoncesController"/>
+      <argument>App\Controller\AnnoncesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\ApiController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ApiController"/>
+      <argument>App\Controller\ApiController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
@@ -4469,12 +4487,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.UD.qrhU"/>
+      <argument type="service" id=".service_locator.w2g3KnF"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.UD.qrhU"/>
+      <argument type="service" id=".service_locator.w2g3KnF"/>
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
@@ -4834,7 +4852,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.UD.qrhU"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.w2g3KnF"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.anofQPJ"/>

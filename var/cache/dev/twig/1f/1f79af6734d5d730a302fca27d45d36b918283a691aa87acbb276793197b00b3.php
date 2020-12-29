@@ -123,24 +123,17 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                 <div class=\"titre\">
                     <h3 class=\"text txt-auteur\"> <strong>";
         // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "annonces", [], "any", false, false, false, 17), "title", [], "any", false, false, false, 17), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "annonce", [], "any", false, false, false, 17), "user", [], "any", false, false, false, 17), "username", [], "any", false, false, false, 17), "html", null, true);
         echo "</strong></h3>
                 </div>
                 <div class=\"tag_form\">
-                    <!--a modifier avec un for twig par rapport au nombre de tag-->
-                    <p class=\"tag text\">action ";
-        // line 21
-        echo "</p>
-                    <p class=\"tag text\">plateform ";
-        // line 22
-        echo "</p>
-                    <p class=\"tag text\">réflexion ";
-        // line 23
-        echo "</p>
+                    ";
+        // line 24
+        echo "
                 </div>
                 <div class=\"image-jeu\">
                     <img class=\"img-jeu\" src=\"";
-        // line 26
+        // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/test.jpg"), "html", null, true);
         echo "\">
                 </div>
@@ -150,7 +143,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                     <div class=\"bandeau\">
                         <div class=\"img-profile\">
                             <img class=\"img-profile\" src=\"";
-        // line 33
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/img_default.jpg"), "html", null, true);
         echo "\">
                         </div>
@@ -158,19 +151,19 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                             <div class=\"auteur form\">
                                 <p class=\"text\"><strong>Nom de l'auteur</strong></p>
                                 <p class=\"textg txt\">ragnarock200038 ";
-        // line 38
+        // line 39
         echo "</p>
                             </div>
                             <div class=\"date form\">
                                 <p class=\"text\"><strong>Date de publication</strong></p>
                                 <p class=\"textg txt\">11/12/2020 ";
-        // line 42
+        // line 43
         echo "</p>
                             </div>
                             <div class=\"nb-tele form\">
                                 <p class=\"text\"><strong>Nombre de téléchagement</strong></p>
                                 <p class=\"textg txt\">500 ";
-        // line 46
+        // line 47
         echo "</p>
                             </div>
                         </div>
@@ -179,8 +172,9 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                     <div class=\"descrip-form\">
                         <div class=\"descrip\">
                             <h3 class=\"text txt-descrip\">Description</h3>
-                            <p class=\"textg txt-des\">petit test à remplacer par l'accés à la base de donnée";
-        // line 54
+                            <p class=\"textg txt-des\">";
+        // line 55
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 55, $this->source); })()), "annonce", [], "any", false, false, false, 55), "content", [], "any", false, false, false, 55), "html", null, true);
         echo "</p>
                         </div>
                     </div>
@@ -188,7 +182,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                 <div class=\"tel-form\">
                     <div class=\"btn-telecharger\">
                         <img class=\"img-tele\" src=\"";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/telecharger.png"), "html", null, true);
         echo "\">
                         <button type=\"button\" class=\"btn text\"><strong>Télécharger</strong></button>
@@ -219,7 +213,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
 
     public function getDebugInfo()
     {
-        return array (  192 => 60,  184 => 54,  174 => 46,  168 => 42,  162 => 38,  154 => 33,  144 => 26,  139 => 23,  136 => 22,  133 => 21,  126 => 17,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  186 => 61,  177 => 55,  167 => 47,  161 => 43,  155 => 39,  147 => 34,  137 => 27,  132 => 24,  126 => 17,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -240,13 +234,14 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
         <div class=\"jeu\">
             <div class=\"jeu-right\">
                 <div class=\"titre\">
-                    <h3 class=\"text txt-auteur\"> <strong>{{ app.annonces.title }}</strong></h3>
+                    <h3 class=\"text txt-auteur\"> <strong>{{ app.annonce.user.username }}</strong></h3>
                 </div>
                 <div class=\"tag_form\">
-                    <!--a modifier avec un for twig par rapport au nombre de tag-->
-                    <p class=\"tag text\">action {# {{ app.jeu.name }} #}</p>
-                    <p class=\"tag text\">plateform {# {{ app.jeu.name }} #}</p>
-                    <p class=\"tag text\">réflexion {# {{ app.jeu.name }} #}</p>
+                    {#<!--a modifier avec un for twig par rapport au nombre de tag-->
+                    <p class=\"tag text\">action {# {{ app.jeu.name }} </p>
+                    <p class=\"tag text\">plateform {# {{ app.jeu.name }} </p>
+                    <p class=\"tag text\">réflexion {# {{ app.jeu.name }} </p>#}
+
                 </div>
                 <div class=\"image-jeu\">
                     <img class=\"img-jeu\" src=\"{{ asset('images/test.jpg') }}\">
@@ -277,7 +272,7 @@ class __TwigTemplate_ae4b3c217ec733ea58b3ef748e3f957b260c88e2ac3a8b7dbbfd4a31c72
                     <div class=\"descrip-form\">
                         <div class=\"descrip\">
                             <h3 class=\"text txt-descrip\">Description</h3>
-                            <p class=\"textg txt-des\">petit test à remplacer par l'accés à la base de donnée{# {{ app.jeu.description }} #}</p>
+                            <p class=\"textg txt-des\">{{ app.annonce.content }}</p>
                         </div>
                     </div>
 

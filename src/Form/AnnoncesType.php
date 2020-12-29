@@ -16,23 +16,28 @@ class AnnoncesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('content')
-            ->add('tags', TextType::class)
+            ->add('title',TextType::class, [
+                'attr' => ['class' => 'titre'],
+            ])
+            ->add('content',TextType::class, [
+                'attr' => ['class' => 'description'],
+            ])
+            ->add('tags', TextType::class, [
+                'attr' => ['class' => 'titre'],
+            ])
             ->add('images', FileType::class, [
                 'label' => false,
                 'multiple' => false,
                 'mapped' => false,
-                'required' => false
+                'required' => false,
+                'attr' => ['class' => 'file text']
             ])
             ->add('files', FileType::class, [
                 'label' => false,
                 'multiple' => false,
                 'mapped' => false,
-                'required' => false
-            ])
-            ->add('valider', SubmitType::class, [
-                'attr' => ['class' => 'btn'],
+                'required' => false,
+                'attr' => ['class' => 'file text']
             ])
         ;
         $builder->get('tags')->addModelTransformer(new CallbackTransformer(

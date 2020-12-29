@@ -50,6 +50,11 @@ class Annonces
      */
     private $tags = [];
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $time;
+
     public function __construct()
     {
         $this->imageAnnonces = new ArrayCollection();
@@ -165,6 +170,18 @@ class Annonces
     public function setTags(array $tags): self
     {
         $this->tags = $tags;
+
+        return $this;
+    }
+
+    public function getTime(): ?\DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    public function setTime(\DateTimeInterface $time): self
+    {
+        $this->time = $time;
 
         return $this;
     }

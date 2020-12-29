@@ -137,10 +137,8 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
                     <div class=\"old-post\">
                         <div class=\"image-jeu\">
                             ";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["annonce"], "images", [], "any", false, false, false, 23), "html", null, true);
-            echo "
-                        </div>
+            // line 24
+            echo "                        </div>
                         <div class=\"description\">
                             ";
             // line 26
@@ -198,7 +196,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
 
     public function getDebugInfo()
     {
-        return array (  177 => 83,  171 => 37,  161 => 32,  151 => 27,  147 => 26,  141 => 23,  136 => 20,  131 => 19,  125 => 16,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  175 => 83,  169 => 37,  159 => 32,  149 => 27,  145 => 26,  141 => 24,  136 => 20,  131 => 19,  125 => 16,  120 => 13,  117 => 12,  107 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -225,7 +223,7 @@ class __TwigTemplate_9db43b426966a9862640beb517deb3b91e9f1173f4d50b76093eeb81457
 
                     <div class=\"old-post\">
                         <div class=\"image-jeu\">
-                            {{annonce.images}}
+                            {#{{annonce.images}}#}
                         </div>
                         <div class=\"description\">
                             {{annonce.title}}
